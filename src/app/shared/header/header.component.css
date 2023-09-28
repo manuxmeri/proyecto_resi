@@ -1,0 +1,49 @@
+.color1{
+    background-color: #691831;
+    color: white;
+    font-size: 18px;
+
+}
+
+.posicion{
+    
+    max-width: 180px;
+	height: auto;
+    object-fit: scale-down;
+    
+}
+
+.posicion1{
+    
+    max-width: 140px;
+	height: auto;
+    object-fit: scale-down;
+}
+
+.tma{
+    font-size: 25px;
+}
+.banda{
+    background-size: cover;
+    width: 100%;
+}
+.contenedor-imagenes {
+    display: flex;
+  }
+  
+  .img1 {
+    margin-right: 10px;
+    height: 40px;
+    width: 110px;
+  
+    object-fit:fill
+  }
+  .img2 {
+    margin-right: 10px;
+    height: 60px;
+    width: 120px;
+    background-size: cover;
+    object-fit:fill
+  }
+
+  

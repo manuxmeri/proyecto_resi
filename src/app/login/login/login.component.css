@@ -1,0 +1,39 @@
+.for{
+    padding-left: 150px;
+}
+
+.form{
+padding-top: 10px;
+padding-bottom: 20px;
+padding-left: 40px;
+}
+
+.form2{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+
+    }
+
+.boton{
+    padding-left: 85%;
+ 
+}
+.label{
+   
+    border: red 5px solid;
+
+}
+
+.formulario{
+    width: 60%;
+}
+
+.grandlent-custom{
+    background: #ebebeb;
+}
+.intro{
+    margin-top: 5px;
+    
+    margin-bottom: 10px;
+}
