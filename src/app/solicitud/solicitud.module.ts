@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
+import { SolicitudComponent } from './solicitud.component';
 import { SharedModule } from '../shared/shared.module';
-import { SolicitudComponent } from '../solicitud/solicitud.component';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    
+    SolicitudComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
-
   exports: [
-    LoginComponent
+    SolicitudComponent
   ],
 })
-export class LoginModule { }
+export class SolicitudModule { }
