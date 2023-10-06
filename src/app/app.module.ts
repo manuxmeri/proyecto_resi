@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
-import { SolicitudComponent } from './solicitud/solicitud.component';
-import { SolicitudModule } from './solicitud/solicitud.module';
+import { SolicitudModule } from './page/solicitud/page.module';
+
+
 
 @NgModule({
   declarations: [
