@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SolicitudComponent } from './solicitud.component';
 
+import { UniconomicaComponent } from './uniconomica.component';
 
-
-describe('SolicitudComponent', () => {
-  let component: SolicitudComponent;
-  let fixture: ComponentFixture<SolicitudComponent>;
+describe('UniconomicaComponent', () => {
+  let component: UniconomicaComponent;
+  let fixture: ComponentFixture<UniconomicaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SolicitudComponent ]
+      declarations: [ UniconomicaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SolicitudComponent);
+    fixture = TestBed.createComponent(UniconomicaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
