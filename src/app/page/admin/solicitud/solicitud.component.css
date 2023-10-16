@@ -1,0 +1,25 @@
+.borderso{
+    border-top: solid 1px rgb(199, 199, 199);
+}
+.textosolicitud{
+    margin-bottom: 40px;
+   
+}
+select{
+    border:  double  rgb(117, 116, 116);
+   
+}
+th{
+    border:  solid 1px  rgb(117, 116, 116);
+}
+td{
+    border:  solid 1px  rgb(117, 116, 116);
+}
+.solicitud{
+    font-family: 'Montserrat'; font-size: 50px;
+    
+}
+p{
+    font-family: 'Montserrat'; font-size: 17px;
+
+}

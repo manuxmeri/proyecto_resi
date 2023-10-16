@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UniconomicaComponent } from './uniconomica/uniconomica.component';
+import { UniconomicaComponent } from './admin/uniconomica/uniconomica.component';
 import { SharedModule } from '../shared/shared.module';
-import { SolicitudComponent } from './solicitud/solicitud.component';
-import { DomicilioComponent } from './domicilio/domicilio.component';
+import { SolicitudComponent } from './admin/solicitud/solicitud.component';
+
 
 
 
@@ -13,7 +13,7 @@ import { DomicilioComponent } from './domicilio/domicilio.component';
   declarations: [
     SolicitudComponent ,
     UniconomicaComponent,
-    DomicilioComponent
+   
   ],
   imports: [
     CommonModule,
@@ -24,7 +24,7 @@ import { DomicilioComponent } from './domicilio/domicilio.component';
 exports: [
   SolicitudComponent ,
   UniconomicaComponent,
-  DomicilioComponent
+  
 ]
 })
 export class PageModule { }

@@ -1,0 +1,13 @@
+.borderso{
+    border-top: solid 1px rgb(199, 199, 199);
+    
+}
+input{
+    border:  solid 1px  rgb(134, 134, 134);
+   
+}
+
+select{
+    border:  double  rgb(68, 67, 67);
+   
+}

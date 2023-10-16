@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login/login.component';
-import { SolicitudComponent } from './page/solicitud/solicitud.component';
-import { UniconomicaComponent } from './page/uniconomica/uniconomica.component';
-import { DomicilioComponent } from './page/domicilio/domicilio.component';
+import { LoginComponent } from './login/admin/login/login.component';
+import { SolicitudComponent } from './page/admin/solicitud/solicitud.component';
+import { UniconomicaComponent } from './page/admin/uniconomica/uniconomica.component';
+import { LoginuserComponent } from './login/user/loginuser/loginuser.component';
 
 
 
@@ -21,9 +21,15 @@ const routes: Routes = [
     component:UniconomicaComponent
   },
   {
-    path:'domicilio',
-    component:DomicilioComponent
+    path:'loginuser',
+    component:LoginuserComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
   }
+ 
+ 
 ];
 
 @NgModule({
