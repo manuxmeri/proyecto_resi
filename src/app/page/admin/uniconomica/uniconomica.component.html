@@ -3,24 +3,26 @@
 
 
 
-<div class="d-flex justify-content-between " style="margin-top:20px;" >
-    <div class="d-flex" style="font-family: 'Montserrat';font-size: 25px; ">
-      <i class="bi bi-house"></i>
-      <i class="bi bi-caret-right"></i>
-     <p>Unidad economica</p>
-     
-    </div>
-    <a href="#"   style="font-family: 'Montserrat';font-size: 25px; color:blue; margin-right:15px;">Manual de usuario</a>
-
-  </div>
 
 
     
 
 
 
-<section class="container">
+<section class="container ">
 
+   <div class="d-flex justify-content-between " style="margin-top:20px;" >
+      <div class="d-flex" >
+        <i class="bi bi-house-door" style="font-size: 25px;"></i>
+        <i class="bi bi-chevron-right" style="font-size: 25px;"></i>
+        <p style="font-family: 'Montserrat';font-size: 25px; ">Solicitudes</p>
+        <i class="bi bi-chevron-right" style="font-size: 25px;"></i>
+       <p style="font-family: 'Montserrat';font-size: 25px; ">Unidad Economica</p>
+       
+      </div>
+      <a href="#"   style="font-family: 'Montserrat';font-size: 25px; color:blue; margin-right:15px;">Manual de usuario</a>
+    
+    </div>
   
 
     <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px; " >
@@ -44,12 +46,18 @@
        
      
 
-     <div class="row" style="margin-top: 50px;">
+     <div class="row formularyborder" style="margin-top: 50px;">
 
         <div class="col-md-4">
             <div class="form-group">
-               <label class="control-label">OFICINA:</label>
-               <select class="form-control required" id="" name="">
+               <div class="d-flex justify-content-between">
+                
+               <label class="control-label textoInput">OFICINA:</label>
+      
+               <button  style="border: solid 1px rgb(122, 3, 3); color:rgb(122, 3, 3);"><i class="bi bi-plus-lg"></i></button>
+            
+            </div>
+               <select class="form-select required" id="" name="">
                       <option value="0">Selecciona una opción</option>
                       <option value="1">Persona fisica</option>
              <option value="2">Persona moral</option>
@@ -64,15 +72,15 @@
 
          <div class="col-md-4">
             <div class="form-group">
-               <label class="control-label">FECHA:</label>
+               <label class="control-label textoInput">FECHA:</label>
                <input class="form-control required" id="" name="" type="date" maxlength="10">
                <p class="vacio" id=""></p>
             </div>
          </div>
 
-         <div class="col-md-4">
+         <div class="col-md-4 b">
             <div class="form-group">
-               <label class="control-label">CAPTURAR RNPA:</label>
+               <label class="control-label textoInput" >CAPTURAR RNPA:</label>
                <input class="form-control required" id="" name="" type="text" maxlength="10">
                <p class="vacio" id=""></p>
             </div>
@@ -92,10 +100,10 @@
        
        <div style="margin-top: 20px;"></div>
        
-            <div class="col-md-4">
+            <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">ESTADO:</label>
-                   <select class="form-control required" id="" name="">
+                   <label class="control-label textoInput">ESTADO:</label>
+                   <select class="form-select required" id="" name="">
                           <option value="0">Selecciona una opción</option>
                           <option value="1">Persona fisica</option>
                  <option value="2">Persona moral</option>
@@ -107,9 +115,9 @@
              </div>
 
                     
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">CURP:</label>
+                   <label class="control-label textoInput" >CURP:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
@@ -126,42 +134,42 @@
              
 
            
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">RFC:</label>
+                   <label class="control-label textoInput">RFC:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">NOMBRES(S):</label>
+                   <label class="control-label textoInput">NOMBRES(S):</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">APELLIDO PATERNO:</label>
+                   <label class="control-label textoInput">APELLIDO PATERNO:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">APELLIDO MATERNO:</label>
+                   <label class="control-label textoInput">APELLIDO MATERNO:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
 
 
-             <div class="col-md-6">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">CORREO ELECTRONICO:</label>
+                   <label class="control-label textoInput">CORREO ELECTRONICO:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
@@ -186,7 +194,7 @@
 
 
 
-<section class="container">
+<section class="container formularyborder">
 
     <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px;" >
  
@@ -200,47 +208,44 @@
 
         <div class="borderso text-center" ></div>
         <div style="margin-top: 20px;"></div>
-        <div class="col-md-4">
-            <div class="form-group">
-               <label class="control-label">CALLE:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
+      
      
 
      <div class="row" style="margin-top: 50px;">
 
-        <div class="col-md-4">
+        <div class="col-md-4 bordeInput">
             <div class="form-group">
-               <label class="control-label">NUMERO EXTERIOR:<span id="">*</span>:</label>
+               <label class="control-label textoInput">NUMERO EXTERIOR:<span id="">*</span>:</label>
                <input class="form-control required" id="" name="" type="text" maxlength="10">
                <p class="vacio" id=""></p>
             </div>
          </div>
 
 
-         <div class="col-md-4">
+         <div class="col-md-4 bordeInput">
             <div class="form-group">
-               <label class="control-label">NUMERO INTERIOR:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
-
-         <div class="col-md-4">
-            <div class="form-group">
-               <label class="control-label">CODIGO POSTAL:<span id="">*</span>:</label>
+               <label class="control-label textoInput">NUMERO INTERIOR:<span id="">*</span>:</label>
                <input class="form-control required" id="" name="" type="text" maxlength="10">
                <p class="vacio" id=""></p>
             </div>
          </div>
 
 
-         <div class="col-md-4">
+
+         
+         <div class="col-md-4 bordeInput">
             <div class="form-group">
-               <label class="control-label">Actividad pesquera</label>
-               <select class="form-control required" id="" name="">
+               <label class="control-label textoInput">CODIGO POSTAL:<span id="">*</span>:</label>
+               <input class="form-control required" id="" name="" type="text" maxlength="10">
+               <p class="vacio" id=""></p>
+            </div>
+         </div>
+
+
+         <div class="col-md-4 bordeInput">
+            <div class="form-group">
+               <label class="control-label textoInput">ACTIVIDAD PESQUERA</label>
+               <select class="form-select required" id="" name="">
                       <option value="0">Selecciona una opción</option>
                       <option value="1">Persona fisica</option>
              <option value="2">Persona moral</option>
@@ -251,9 +256,9 @@
             </div>
          </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 bordeInput">
            <div class="form-group">
-              <label class="control-label">Fecha de operaciones</label>
+              <label class="control-label textoInput">FECHA DE OPERACIONES</label>
               <input class="form-control required" id="" name="" type="date" maxlength="10">
               <p class="vacio" id=""></p>
           </div>
@@ -262,10 +267,10 @@
        
 
 
-        <div class="col-md-4">
+        <div class="col-md-4 bordeInput">
            <div class="form-group">
-              <label class="control-label">Cantidad de pescadores<span id="">*</span>:</label>
-              <input class="form-control required" id="" name="" type="text" maxlength="10">
+              <label class="control-label textoInput">CANTIDAD DE PESCADORES<span id="">*</span>:</label>
+              <input class="form-control required" id="" name="" type="number" maxlength="10">
               <p class="vacio" id=""></p>
            </div>
         </div>
@@ -273,10 +278,10 @@
      
         
             
-            <div class="col-md-4">
+            <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">ESTADO:</label>
-                   <select class="form-control required" id="" name="">
+                   <label class="control-label textoInput">ESTADO:</label>
+                   <select class="form-select required" id="" name="">
                           <option value="0">Selecciona una opción</option>
                           <option value="1">Persona fisica</option>
                  <option value="2">Persona moral</option>
@@ -287,10 +292,10 @@
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">MUNICIPIO:</label>
-                   <select class="form-control required" id="" name="">
+                   <label class="control-label textoInput" >MUNICIPIO:</label>
+                   <select class="form-select required" id="" name="">
                           <option value="0">Selecciona una opción</option>
                           <option value="1">Persona fisica</option>
                  <option value="2">Persona moral</option>
@@ -303,10 +308,10 @@
 
 
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">LOCALIDAD:</label>
-                   <select class="form-control required" id="" name="">
+                   <label class="control-label textoInput">LOCALIDAD:</label>
+                   <select class="form-select required" id="" name="">
                           <option value="0">Selecciona una opción</option>
                           <option value="1">Persona fisica</option>
                  <option value="2">Persona moral</option>
@@ -317,10 +322,10 @@
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">TIPO:</label>
-                   <select class="form-control required" id="" name="">
+                   <label class="control-label textoInput">TIPO:</label>
+                   <select class="form-select required" id="" name="">
                           <option value="0">Selecciona una opción</option>
                           <option value="1">Persona fisica</option>
                  <option value="2">Persona moral</option>
@@ -331,21 +336,29 @@
                 </div>
              </div>
 
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">ASENTAMIENTO/COLONIA:<span id="">*</span>:</label>
+                   <label class="control-label textoInput">ASENTAMIENTO/COLONIA:<span id="">*</span>:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
              
-             <div class="col-md-4">
+             <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">TELEFONO:<span id="">*</span>:</label>
+                   <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
                    <input class="form-control required" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
+
+             <div class="col-md-8 bordeInput">
+               <div class="form-group">
+                  <label class="control-label textoInput">CALLE:</label>
+                  <input class="form-control required" id="" name="" type="text" maxlength="10">
+                  <p class="vacio" id=""></p>
+               </div>
+            </div>
 
              
 
@@ -357,7 +370,7 @@
 
 
 
-<section class="container">
+<section class="container formularyborder">
 
     <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px;" >
  
@@ -372,23 +385,11 @@
 
      <div class="row" style="margin-top: 50px;">
 
-        <div class="col-md-4">
-            <div class="form-group">
-               <label class="control-label">Actividad pesquera</label>
-               <select class="form-control required input " id="" name="">
-                      <option value="0">Selecciona una opción</option>
-                      <option value="1">Persona fisica</option>
-             <option value="2">Persona moral</option>
-                     
-                      <option value="3">Ambas</option>        
-               </select>
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
+       
 
-        <div class="col-md-4">
+        <div class="col-md-4 bordeInput">
            <div class="form-group"  >
-              <label class="control-label">Fecha de operaciones</label>
+              <label class="control-label textoInput">FECHA DE OPERACIONES</label>
               <input class="form-control required input" id="" name="" type="date" maxlength="10" >
               <p class="vacio" id=""></p>
           </div>
@@ -396,33 +397,32 @@
 
        
 
-        <div class="col-md-4">
+        <div class="col-md-4 bordeInput">
            <div class="form-group">
-              <label class="control-label">Cantidad de pescadores<span id="">*</span>:</label>
+              <label class="control-label textoInput">CANTIDAD DE PESCADORES<span id="">*</span>:</label>
               <input class="form-control required input" id="" name="" type="text" maxlength="10">
               <p class="vacio" id=""></p>
            </div>
         </div>
+
+        <div class="col-md-3 bordeInput">
+         <div class="form-group">
+            <label class="control-label textoInput"></label>
+            <button class="form-control required input" style="background-color: aquamarine; margin-top:15px;">SUBIR ARCHIVO<i class="bi bi-file-arrow-up"></i>
+            </button>
+            <p class="vacio" id=""></p>
+         </div>
+      </div>
+
+       
        
         <p class="container" style=" font-family: 'Montserrat'; font-size: 35px; margin-top:35px; color:rgb(87, 86, 85)"     ><strong>Socio 1</strong><p>
         
-            <div class="col-md-4">
-                <div class="form-group">
-                   <label class="control-label">Tipo</label>
-                   <select class="form-control required input" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
-                   </select>
-                   <p class="vacio" id=""></p>
-                </div>
-             </div>
+           
             
-            <div class="col-md-4">
+            <div class="col-md-4 bordeInput">
                 <div class="form-group">
-                   <label class="control-label">CURP:<span id="">*</span>:</label>
+                   <label class="control-label textoInput">CURP:<span id="">*</span>:</label>
                    <input class="form-control required input" id="" name="" type="text" maxlength="10">
                    <p class="vacio" id=""></p>
                 </div>
@@ -439,13 +439,17 @@
            <div class="pull-left">
               <p class="top_10">* Campos obligatorios</p>
            </div>
-           <div class="d-flex justify-content-end " style="margin-bottom: 50px;">
-              <button class="btn btn-default" id="btn_descartar" type="button">Descartar</button>
-              <button class="btn btn-primary" id="btn_guardar" type="button">Guardar</button>
+           <div class="d-flex justify-content-end  " style="margin-bottom: 50px;">
+              <button class="btn btn-default botones" id="btn_cancelar" type="button "  height="40px;" style="background-color: rgb(110, 109, 109); color:white;">Cancelar</button>
+              <button class="btn  botones" id="btn_guardar" type="button" style="background-color: brown; color:white;" >Guardar</button>
            </div>
         </div>
      </div>
+
+     
      
 </section>
 
+
+   
 <app-footer></app-footer>

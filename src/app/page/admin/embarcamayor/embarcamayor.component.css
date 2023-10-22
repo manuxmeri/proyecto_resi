@@ -3,7 +3,7 @@
     
 }
 input{
-    border:  solid 1px  rgb(134, 134, 134);
+    border:  solid 1px  #A9A9A9;;
     margin-top: 5px;
    
 }
@@ -16,7 +16,7 @@ input{
 select{
    
  
-    box-shadow: 1px 1px 3px  rgb(122, 122, 122);
+    box-shadow: 1px 1px 3px  #A9A9A9;;
     margin-top: 5px;
 }
 .botones{
@@ -26,7 +26,7 @@ margin-right: 20px;
 }
 .btn{
     width:150px;
-    height: 50px;
+    height: 60px;
     
 }
 .textoInput{
