@@ -5,6 +5,8 @@ import { UniconomicaComponent } from './admin/uniconomica/uniconomica.component'
 import { SharedModule } from '../shared/shared.module';
 import { SolicitudComponent } from './admin/solicitud/solicitud.component';
 import { EmbarcamayorComponent } from './admin/embarcamayor/embarcamayor.component';
+import { EmbarcamenorComponent } from './admin/embarcamenor/embarcamenor.component';
+import { InstalacuicolaComponent } from './admin/instalacuicola/instalacuicola.component';
 
 
 
@@ -15,6 +17,8 @@ import { EmbarcamayorComponent } from './admin/embarcamayor/embarcamayor.compone
     SolicitudComponent ,
     UniconomicaComponent,
     EmbarcamayorComponent,
+    EmbarcamenorComponent,
+    InstalacuicolaComponent,
    
   ],
   imports: [

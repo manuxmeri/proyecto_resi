@@ -1,0 +1,44 @@
+.borderso{
+    border-top: solid 1px rgb(199, 199, 199);
+    
+}
+input{
+    border:  solid 1px  #A9A9A9;;
+    margin-top: 5px;
+   
+}
+.bordeInput{
+    margin-top: 30px;
+  
+}
+
+
+select{
+   
+ 
+    box-shadow: 1px 1px 3px  #A9A9A9;;
+    margin-top: 5px;
+}
+.botones{
+width: 50px;
+height: 25px;
+margin-right: 20px;
+}
+.btn{
+    width:150px;
+    height: 60px;
+    
+}
+.textoInput{
+    font-family: 'Montserrat'; 
+        color: rgb(53, 53, 53);
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 5px;
+}
+.margintitle{
+    margin-top: 35px;
+
+}
+
+

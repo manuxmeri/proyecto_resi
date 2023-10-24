@@ -6,6 +6,9 @@ import { UniconomicaComponent } from './page/admin/uniconomica/uniconomica.compo
 import { LoginuserComponent } from './login/user/loginuser/loginuser.component';
 import { LoginComponent } from './login/admin/login/login.component';
 import { EmbarcamayorComponent } from './page/admin/embarcamayor/embarcamayor.component';
+import { MenuComponent } from './shared/menu/menu.component';
+import { EmbarcamenorComponent } from './page/admin/embarcamenor/embarcamenor.component';
+import { InstalacuicolaComponent } from './page/admin/instalacuicola/instalacuicola.component';
 
 
 LoginComponent
@@ -33,7 +36,24 @@ const routes: Routes = [
   {
     path:'embarcamayor',
     component:EmbarcamayorComponent
-  }
+  },
+  {
+    path:'menu',
+    component:MenuComponent
+  },
+  {
+    path:'embarcamenor',
+    component:EmbarcamenorComponent
+  },
+  {
+    path:'instalacuicola',
+    component:InstalacuicolaComponent
+  },
+
+  
+  
+  
+  
  
  
 ];
