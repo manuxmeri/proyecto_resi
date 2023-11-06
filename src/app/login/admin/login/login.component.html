@@ -8,12 +8,12 @@
     
     <div class="d-flex justify-content-between " style="margin-top:20px;margin-left:20px;" >
       <div class="d-flex" style="font-family: 'Montserrat';font-size: 25px; ">
-        <i class="bi bi-house"></i>
-        <i class="bi bi-caret-right"></i>
+        <i class="bi bi-house-door" style="font-size: 25px;"></i>
+        <i class="bi bi-chevron-right" style="font-size: 25px;"></i>
        <p>Inicio</p>
       </div>
       
-        
+   
        
        <a href="loginuser"   style="font-family: 'Montserrat';font-size: 25px; color:blue; margin-right:15px;">Iniciar como usuario</a>
      
@@ -58,7 +58,11 @@
 <div class="form-outline mb-3" >
   
   <input type="email" id="typeEmail"
- class="form-control form-control-lg" style="border: solid 0.5px rgb(121, 120, 120);">
+ class="form-control form-control-lg" style="border: solid 0.5px rgb(121, 120, 120); 
+ text-transform: uppercase;"
+ onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  ((event.charCode >= 65 
+ && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+                      class="form-control form-control-lg">
  
 
 </div>
