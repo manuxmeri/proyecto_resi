@@ -1,5 +1,5 @@
 export interface Oficina {
-    id : number;
+    id : string;
     NombreOficina : String,
     Ubicacion : String,
     Telefono: String,

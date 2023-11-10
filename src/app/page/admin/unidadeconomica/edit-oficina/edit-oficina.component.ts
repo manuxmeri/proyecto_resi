@@ -12,19 +12,19 @@ import { ApiService } from 'src/app/service/api.service';
 export class EditOficinaComponent implements OnInit {
   formuOfi: FormGroup;
   idOficina: any;
-  dato:  any[]=[];
   
-  @Input() datosOficina: any = {  NombreOficina: '', Ubicacion: '',Telefono: '', Email: '' };
+  
+  @Input() datosOficina: Oficina = { id:'', NombreOficina: '', Ubicacion: '',Telefono: '', Email: '' };
   constructor(public formulario: FormBuilder, private api:ApiService,private router:Router, private activate:ActivatedRoute ){
     this.idOficina = this.activate.snapshot.paramMap.get('id');
-    this.api.getId(this.idOficina).subscribe(dato =>{
-      console.log(dato);
+    this.api.getId(this.idOficina).subscribe(datosOficina =>{
+      console.log(datosOficina);
       this.formuOfi.setValue({
-        id: dato[0]['id'],
-        NombreOficina: dato[0]['NombreOficina'],
-        Ubicacion: dato[0]['Ubicacion'],
-        Telefono: dato[0]['Telefono'],
-        Email: dato[0]['Email']
+        id: datosOficina[0]['id'],
+        NombreOficina: datosOficina[0]['NombreOficina'],
+        Ubicacion: datosOficina[0]['Ubicacion'],
+        Telefono: datosOficina[0]['Telefono'],
+        Email: datosOficina[0]['Email']
       }
       );
     }
@@ -63,7 +63,7 @@ export class EditOficinaComponent implements OnInit {
   
   put():any{
    
-    this.api.editOfi(this.idOficina, this.formuOfi.value).subscribe(datos => {
+    this.api.editOfi(this.idOficina, this.formuOfi.value).subscribe(datosOficinas => {
       this.router.navigateByUrl('oficinas');
     
     });

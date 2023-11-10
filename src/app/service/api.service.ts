@@ -36,9 +36,9 @@ export class ApiService {
   }
 
  
-  editOfi(id: any ,put:  Oficina):Observable<any>{
+  editOfi(id: any ,put:  Oficina):Observable<Oficina>{
     let direccion = this.path+"/"+ id;
-    return this.http.put<any>(direccion, put)
+    return this.http.put<Oficina>(direccion, put)
   }
 
   eliminar(id:any): Observable<any>{
