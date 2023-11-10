@@ -59,11 +59,8 @@
             
             </div>
                <select class="form-select required" id="" name="">
-                      <option value="0">Selecciona una opción</option>
-                      <option value="1">Persona fisica</option>
-             <option value="2">Persona moral</option>
-                     
-                      <option value="3">Ambas</option>        
+                      <option>Selecciona una opción</option>
+                      <option *ngFor="let ofi of data ">{{ofi.NombreOficina}}</option>       
                </select>
                <p class="vacio" id=""></p>
             </div>
@@ -74,7 +71,7 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">FECHA:</label>
-               <input class="form-control required" id="" name="" type="date" maxlength="10">
+               <input class="form-control required" id="" name="" type="date">
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -82,7 +79,7 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput" >CAPTURAR RNPA:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
+               <input class="form-control required" id="" name="" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -119,7 +116,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput" >CURP:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -138,7 +135,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">RFC:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -146,7 +143,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">NOMBRES(S):</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -154,7 +151,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">APELLIDO PATERNO:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -162,7 +159,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">APELLIDO MATERNO:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -171,7 +168,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">CORREO ELECTRONICO:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -217,7 +214,7 @@
         <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">NUMERO EXTERIOR:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
+               <input class="form-control required" id="" name="" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -226,7 +223,7 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">NUMERO INTERIOR:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
+               <input class="form-control required" id="" name="" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -237,7 +234,7 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">CODIGO POSTAL:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" type="text" maxlength="10">
+               <input class="form-control required" id="" name="" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -260,7 +257,7 @@
         <div class="col-md-4 marginput">
            <div class="form-group">
               <label class="control-label textoInput">FECHA DE OPERACIONES</label>
-              <input class="form-control required" id="" name="" type="date" maxlength="10">
+              <input class="form-control required" id="" name="" type="date" >
               <p class="vacio" id=""></p>
           </div>
         </div>
@@ -271,7 +268,7 @@
         <div class="col-md-4 marginput">
            <div class="form-group">
               <label class="control-label textoInput">CANTIDAD DE PESCADORES<span id="">*</span>:</label>
-              <input class="form-control required" id="" name="" type="number" maxlength="10">
+              <input class="form-control required" id="" name="" type="number" >
               <p class="vacio" id=""></p>
            </div>
         </div>
@@ -340,7 +337,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">ASENTAMIENTO/COLONIA:<span id="">*</span>:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -348,7 +345,7 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
-                   <input class="form-control required" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -356,7 +353,7 @@
              <div class="col-md-8 marginput">
                <div class="form-group">
                   <label class="control-label textoInput">CALLE:</label>
-                  <input class="form-control required" id="" name="" type="text" maxlength="10">
+                  <input class="form-control required" id="" name="" type="text" >
                   <p class="vacio" id=""></p>
                </div>
             </div>
@@ -437,7 +434,7 @@
         <div class="col-md-4 marginput">
            <div class="form-group"  >
               <label class="control-label textoInput">FECHA DE OPERACIONES</label>
-              <input class="form-control required input" id="" name="" type="date" maxlength="10" >
+              <input class="form-control required input" id="" name="" type="date"  >
               <p class="vacio" id=""></p>
           </div>
         </div>
@@ -447,7 +444,7 @@
         <div class="col-md-4 marginput">
            <div class="form-group">
               <label class="control-label textoInput">CANTIDAD DE PESCADORES<span id="">*</span>:</label>
-              <input class="form-control required input" id="" name="" type="text" maxlength="10">
+              <input class="form-control required input" id="" name="" type="text" >
               <p class="vacio" id=""></p>
            </div>
         </div>
@@ -556,7 +553,7 @@
             <div class="col-md-4 ">
                 <div class="form-group">
                    <label class="control-label textoInput">CURP:</label>
-                   <input class="form-control required input" id="" name="" type="text" maxlength="10">
+                   <input class="form-control required input" id="" name="" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>

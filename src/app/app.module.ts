@@ -7,8 +7,9 @@ import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
 import { PageModule } from './page/page.module';
 
-import { FiltroPipe } from './pipes/filtro.pipe';
+
 import { PipesModule } from './pipes/pipes.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -30,10 +31,10 @@ import { PipesModule } from './pipes/pipes.module';
     SharedModule,
     PageModule,
     HttpClientModule,
-    PipesModule
+    PipesModule,
+    ReactiveFormsModule,
+    FormsModule
    
-    
-    
     
     
   ],
