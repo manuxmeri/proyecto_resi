@@ -102,35 +102,6 @@ p{
     color: white;
 }
 
-
-
-
-
-dialog {
-    padding: 0;
-    border: 1px solid #d9d3d3;
-    box-shadow: 0px 4px 4px #7B7B7C(146, 146, 146, 0.9);
-
-}
-
-dialog .modal-body {
-    padding: 40px 70px;
-    border: 1px solid #d9d3d3;
-    box-shadow: 0px 4px 4px #7B7B7C(146, 146, 146, 0.9);
-
-
-}
-
-dialog::backdrop {
-    background: #7B7B7C(146, 146, 146, 0.9);
-}
-
-dialog .modal-header {
-    background-color: #691831;
-    color: white;
-    padding: 15px 28%;
-}
-
 dialog {
     padding: 0;
     border: 1px solid #d9d3d3;

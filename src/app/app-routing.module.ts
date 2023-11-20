@@ -12,6 +12,9 @@ import { InstalacuicolaComponent } from './page/person/instalacuicola/instalacui
 import { PanelComponent } from './page/admin/panel/panel.component';
 import { OficinasComponent } from './page/admin/unidadeconomica/oficinas/oficinas.component';
 import { EditOficinaComponent } from './page/admin/unidadeconomica/edit-oficina/edit-oficina.component';
+import { AgreOficinaComponent } from './page/admin/unidadeconomica/agre-oficina/agre-oficina.component';
+import { PermisosComponent } from './page/admin/permisos/permisos.component';
+import { AgregarPermisoComponent } from './page/admin/permisos/agregar-permiso/agregar-permiso.component';
 
 
 LoginComponent
@@ -65,6 +68,20 @@ const routes: Routes = [
     path:'edit-oficina/:id',
     component:EditOficinaComponent
   },
+  {
+    path:'agregar-oficina',
+    component:AgreOficinaComponent
+  },
+
+  {
+    path:'permisos',
+    component:PermisosComponent
+  },
+  {
+    path:'agregar-permiso',
+    component:AgregarPermisoComponent
+  },
+
 
 
   

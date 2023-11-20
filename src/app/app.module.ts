@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
 import { PageModule } from './page/page.module';
-
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { PipesModule } from './pipes/pipes.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -15,9 +18,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    ConfirmDialogComponent,
   
     
   
@@ -33,7 +39,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     HttpClientModule,
     PipesModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatDialogModule,
+    MatSnackBarModule,
    
     
     

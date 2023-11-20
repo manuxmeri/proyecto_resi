@@ -15,10 +15,27 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+
   getUni(){
     return this.http.get(this.path);
   }
 
+  getRegiones(){
+    return this.http.get('http://localhost:8000/api/regiones');
+  }
+  getMunicipios(){
+    return this.http.get('http://localhost:8000/api/municipios');
+  }
+  
+  getLocalidades(){
+    return this.http.get('http://localhost:8000/api/localidades');
+  }
+
+  getRoles(){
+    return this.http.get('http://localhost:8000/api/roles');
+  }
+  
+  
   /*agregar(uni: unidad): Observable<unidad>{
     return this.http.post<unidad>(`${this.path}`, uni)
   }*/

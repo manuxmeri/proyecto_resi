@@ -11,6 +11,9 @@ import { PanelComponent } from './admin/panel/panel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OficinasComponent } from './admin/unidadeconomica/oficinas/oficinas.component';
 import { EditOficinaComponent } from './admin/unidadeconomica/edit-oficina/edit-oficina.component';
+import { AgreOficinaComponent } from './admin/unidadeconomica/agre-oficina/agre-oficina.component';
+import { PermisosComponent } from './admin/permisos/permisos.component';
+import { AgregarPermisoComponent } from './admin/permisos/agregar-permiso/agregar-permiso.component';
 
 
 
@@ -26,6 +29,9 @@ import { EditOficinaComponent } from './admin/unidadeconomica/edit-oficina/edit-
     PanelComponent,
     OficinasComponent,
     EditOficinaComponent,
+    AgreOficinaComponent,
+    PermisosComponent,
+    AgregarPermisoComponent,
    
   ],
   imports: [

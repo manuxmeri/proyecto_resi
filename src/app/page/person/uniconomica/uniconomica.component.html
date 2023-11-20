@@ -48,15 +48,12 @@
      
 
      <div class="row formularyborder" >
-
+      
         <div class="col-md-4 marginput ">
             <div class="form-group">
                <div class="d-flex justify-content-between">
                 
                <label class="control-label textoInput">OFICINA:</label>
-      
-               
-            
             </div>
                <select class="form-select required" id="" name="">
                       <option>Selecciona una opción</option>
@@ -65,6 +62,8 @@
                <p class="vacio" id=""></p>
             </div>
          </div>
+
+        
 
 
 
@@ -102,11 +101,9 @@
                 <div class="form-group">
                    <label class="control-label textoInput">ESTADO:</label>
                    <select class="form-select required" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
+                     <option>Selecciona una opción</option>
+                     <option *ngFor="let regiones of regi ">{{regiones.NombreRegion}}</option>    
+                        
                    </select>
                    <p class="vacio" id=""></p>
                 </div>
@@ -164,6 +161,27 @@
                 </div>
              </div>
 
+             <div class="col-md-4 marginput">
+                <div class="form-group">
+                   <label class="control-label textoInput">SEXO</label>
+                   <select class="form-select required" id="" name="">
+                     <option>Selecciona una opción</option>
+                      <option>MASCULINO</option>
+                       <option>FEMENINO</option> 
+                        
+                   </select>
+                   <p class="vacio" id=""></p>
+                </div>
+             </div>
+    
+             <div class="col-md-4 marginput">
+                <div class="form-group">
+                   <label class="control-label textoInput">GRUPO SANGUINEO:</label>
+                   <input class="form-control required" id="" name="" type="text" >
+                   <p class="vacio" id=""></p>
+                </div>
+             </div>
+    
 
              <div class="col-md-4 marginput">
                 <div class="form-group">
@@ -276,15 +294,14 @@
      
         
             
-            <div class="col-md-4 marginput">
+            
+              <div class="col-md-4 marginput">
                 <div class="form-group">
-                   <label class="control-label textoInput">ESTADO:</label>
+                   <label class="control-label textoInput">REGIÓN:</label>
                    <select class="form-select required" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
+                     <option>Selecciona una opción</option>
+                     <option *ngFor="let regiones of regi ">{{regiones.NombreRegion}}</option>    
+                        
                    </select>
                    <p class="vacio" id=""></p>
                 </div>
@@ -294,11 +311,9 @@
                 <div class="form-group">
                    <label class="control-label textoInput" >MUNICIPIO:</label>
                    <select class="form-select required" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
+                     <option>Selecciona una opción</option>
+                     <option *ngFor="let municipios of muni ">{{municipios.NombreMunicipio}}</option>    
+                               
                    </select>
                    <p class="vacio" id=""></p>
                 </div>
@@ -310,11 +325,9 @@
                 <div class="form-group">
                    <label class="control-label textoInput">LOCALIDAD:</label>
                    <select class="form-select required" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
+                     <option>Selecciona una opción</option>
+                     <option *ngFor="let localidades of locali ">{{localidades.NombreLocalidad}}</option>    
+                                    
                    </select>
                    <p class="vacio" id=""></p>
                 </div>
