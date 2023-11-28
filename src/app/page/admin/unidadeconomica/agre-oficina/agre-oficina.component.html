@@ -1,6 +1,6 @@
 
 <app-header></app-header>
-<section>
+<section class="container">
   <div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
       <div class="container" >
           <div class="d-flex justify-content-center">
@@ -8,38 +8,34 @@
                   <div class="card rounded-0 shadow">
                       <div class="card-body">
                           <div class="text-center">
-                              <h3 >Dar de alta a nuevo usuario</h3>
-                              <i class="bi bi-person-bounding-box" style="font-size: 80px;"></i>
+                              <h3 >Agregar una nueva oficina</h3>
+                              <i class="bi bi-buildings-fill" style="font-size: 125px;"></i>
                           </div>
                         
                           
                         
-                          <form>
+                          <form [formGroup]="FormUni" (submit)="enviar()" ngNativeValidate>
                               <div class="form-group">
-                                  <label for="exampleInputEmail1">Nombre completo: </label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca el nombre completo">
+                                <label for="">Nombre</label>
+                                <input required type="text" name="" formControlName="NombreOficina" id="" class="form-control">
                               </div>
                               <div class="form-group">
-                                  <label for="exampleInputEmail1">Correo electronico:</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico">
-                                  
+                                <label for="">Ubicacion</label>
+                                <input required type="text" name="" formControlName="Ubicacion" id="" class="form-control">
                               </div>
                              
                               <div class="form-group">
-                                  <label for="exampleInputPassword1">Password: </label>
-                                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduzca una contraseña">
+                                <label for="">Telefono</label>
+                                <input required type="text" name="" formControlName="Telefono" id="" class="form-control">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="">Email</label>
+                                <input required type="text" name="" formControlName="Email" id="" class="form-control">
                               </div>
                               
                              
-                                  <div class="form-group">
-                                     <label class="control-label textoInput">Roles:</label>
-                                     <select class="form-select required" id="" name="">
-                                       <option>Selecciona una opción</option>
-                                         
-                                                      
-                                     </select>
-                                     <p class="vacio" id=""></p>
-                                  </div>
+                                
                                
                               <div class="form-group form-check">
                                 
@@ -52,35 +48,10 @@
           </div>
       </div>
   </div>
-          <!-- Optional JavaScript -->
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+         
       </section>
       
 
 
-<section  class="container">
-<form [formGroup]="FormUni" (submit)="enviar()" ngNativeValidate>
-    <div class="form-group">
-      <label for="">Nombre</label>
-      <input required type="text" name="" formControlName="NombreOficina" id="" class="form-control" >
-    </div>
-    <div class="form-group">
-        <label for="">Ubicacion</label>
-        <input required type="text" name="" formControlName="Ubicacion" id="" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="">Telefono</label>
-        <input required type="text" name="" formControlName="Telefono" id="" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="">Email</label>
-        <input required type="text" name="" formControlName="Email" id="" class="form-control">
-      </div>
 
-      <br>
-      
-    <button class="centrado">Agregar</button>
-    
-  </form>
-</section>
   <app-footer></app-footer>

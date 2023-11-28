@@ -30,7 +30,7 @@ export class AgreOficinaComponent implements OnInit {
     //console.log(this.FormUni.value);
     this.api.agreOfi(this.FormUni.value).subscribe();
     this.router.navigateByUrl('oficinas');
-    location.reload();
+   
 
     }
 

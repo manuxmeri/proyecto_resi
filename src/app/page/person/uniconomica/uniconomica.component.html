@@ -99,10 +99,11 @@
        
             <div class="col-md-4 marginput">
                 <div class="form-group">
-                   <label class="control-label textoInput">ESTADO:</label>
+                   <label class="control-label textoInput">TIPO DE PERSONA:</label>
                    <select class="form-select required" id="" name="">
                      <option>Selecciona una opción</option>
-                     <option *ngFor="let regiones of regi ">{{regiones.NombreRegion}}</option>    
+                     <option>Persona fisica</option>
+                     <option>Persona moral</option>
                         
                    </select>
                    <p class="vacio" id=""></p>
@@ -333,19 +334,7 @@
                 </div>
              </div>
 
-             <div class="col-md-4 marginput">
-                <div class="form-group">
-                   <label class="control-label textoInput">TIPO:</label>
-                   <select class="form-select required" id="" name="">
-                          <option value="0">Selecciona una opción</option>
-                          <option value="1">Persona fisica</option>
-                 <option value="2">Persona moral</option>
-                         
-                          <option value="3">Ambas</option>        
-                   </select>
-                   <p class="vacio" id=""></p>
-                </div>
-             </div>
+            
 
              <div class="col-md-4 marginput">
                 <div class="form-group">
@@ -355,13 +344,8 @@
                 </div>
              </div>
              
-             <div class="col-md-4 marginput">
-                <div class="form-group">
-                   <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
-                   <input class="form-control required" id="" name="" type="text" >
-                   <p class="vacio" id=""></p>
-                </div>
-             </div>
+            
+            
 
              <div class="col-md-8 marginput">
                <div class="form-group">
@@ -372,8 +356,45 @@
             </div>
 
              
+            <div class="col-md-4 marginput">
+               <div class="form-group">
+                  <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
+                  <input class="form-control required" id="" name="" type="text" >
+                  <p class="vacio" id=""></p>
+               </div>
+            </div>
+
+
+            <div class="col-md-4 marginput">
+              <div class="form-group">
+                 <label class="control-label textoInput">TIPO:</label>
+                 <select class="form-select required" id="" name="">
+                        <option value="0">Selecciona una opción</option>
+                        <option value="1">Persona fisica</option>
+               <option value="2">Persona moral</option>
+                       
+                        <option value="3">Ambas</option>        
+                 </select>
+                 <p class="vacio" id=""></p>
+              </div>
+           </div>
+
+           <div class="col-md-3 marginput">
+            <div class="form-group">
+               <label class="control-label textoInput"></label>
+               <button class="form-control required input"
+                  style="background-color: rgb(18, 119, 89); color:white; margin-top:15px;">
+                  <i class="bi bi-phone"></i> AGREGAR TELEFONO
+               </button>
+            </div>
+         </div>
+
+
+
 
      </div>
+
+     
      <div class="d-flex justify-content-end  " style="margin-top:20px;  " >
       <div class="d-flex text-center col-md-8" >
          <table class=" table  text-center "    style="  margin-top:50px; margin-bottom: 80px; font-family: 'Montserrat'; font-size:17px; border:solid 1px rgb(179, 176, 176)">
@@ -389,31 +410,25 @@
             <tbody style="border:solid 1px rgb(122, 122, 122); " class="text-center">
               <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>9711234567</td>
+                <td>Principal</td>
              
                
-                <td><a href=""><i class="bi bi-check2-all"></i></a>
-                  <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
+                <td> <a href=""><i class="bi bi-trash-fill" style="margin-left: 6%;"></i></a>
                 </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Otto</td>
+                <td>55678948448</td>
+                <td>Secundario</td>
                
-                <td><a href=""><i class="bi bi-check2-all"></i></a>
-                  <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
+                <td>
+                  <a href=""><i class="bi bi-trash-fill" style="margin-left: 6%;"></i></a>
                 </td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>Otto</td>
-              
-                <td><a href=""><i class="bi bi-check2-all"></i></a>
-                  <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
-                </td>
+               
+                
               </tr>
             </tbody>
           </table>
@@ -455,18 +470,23 @@
        
 
         <div class="col-md-4 marginput">
-           <div class="form-group">
-              <label class="control-label textoInput">CANTIDAD DE PESCADORES<span id="">*</span>:</label>
-              <input class="form-control required input" id="" name="" type="text" >
-              <p class="vacio" id=""></p>
-           </div>
-        </div>
+         <div class="form-group">
+            <label class="control-label textoInput">ACTIVIDAD PESQUERA:</label>
+            <select class="form-select required" id="" name="">
+              <option>Selecciona una opción</option>
+              <option>Acuacultura</option>
+              <option>Captura</option>
+                 
+            </select>
+            <p class="vacio" id=""></p>
+         </div>
+      </div>
 
         <div class="col-md-3 marginput">
          <div class="form-group">
             <label class="control-label textoInput"></label>
             <button class="form-control required input" onclick="window.modal1.showModal();"
-               style="background-color: #C8DBD5; margin-top:15px;">
+               style="background-color: rgb(18, 119, 89); color:white; margin-top:15px;">
                <i class="bi bi-folder-plus"></i> SUBIR ARCHIVO
             </button>
             <dialog id="modal1">
@@ -559,18 +579,7 @@
       </div>
        
        
-        <p style=" font-family: 'Montserrat'; font-size: 35px; margin-top:35px; color:rgb(87, 86, 85)"     ><strong>Socio 1</strong><p>
-        
-           
-            
-            <div class="col-md-4 ">
-                <div class="form-group">
-                   <label class="control-label textoInput">CURP:</label>
-                   <input class="form-control required input" id="" name="" type="text" >
-                   <p class="vacio" id=""></p>
-                </div>
-             </div>
-
+       
             
 
 

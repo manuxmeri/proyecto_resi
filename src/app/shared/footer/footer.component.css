@@ -30,7 +30,11 @@ object-fit: scale-down;
   
 }
 footer{
-    clear: both;
+    width: 100%;
+    margin-bottom: 0;
+   margin-left: 0;
+ 
+   
 }
 
 
