@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Roles } from '../interfaces/roles';
 import { Oficina } from '../interfaces/oficina';
+import { Uniconomicafisica } from '../interfaces/uniconomicafisica';
 
 @Injectable({
   providedIn: 'root'
@@ -62,4 +63,9 @@ export class ApiService {
     return this.http.delete<any>(`${this.path}/${id}`);
   }
 
+
+  agreUni(uni: Uniconomicafisica):Observable<Uniconomicafisica>{
+    let direccion = "http://localhost:8000/api/unidades_economicas_pa_fisico";
+    return this.http.post<Uniconomicafisica>(direccion, uni)
+  }
 }

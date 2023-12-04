@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
-import { FormBuilder } from '@angular/forms';
+
 import { RegionService } from 'src/app/service/region.service';
 import { Regiones } from 'src/app/interfaces/regiones';
 import { Oficina } from 'src/app/interfaces/oficina';
 import { Municipios } from 'src/app/interfaces/municipios';
 import { Localidades } from '../../../interfaces/localidades';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-uniconomica',
@@ -15,10 +17,42 @@ import { Localidades } from '../../../interfaces/localidades';
 })
 export class UniconomicaComponent implements OnInit {
   regi: Regiones[]=[];
-  data:  Oficina[]=[];
+  oficinas:  Oficina[]=[];
   muni: Municipios[]=[];
   locali: Localidades[]=[];
-  constructor(private  api:ApiService,private apiRegiones:RegionService ,private router:Router, public formulario:FormBuilder) { }
+  FormUni:FormGroup;
+  constructor(private snackBar: MatSnackBar,private  api:ApiService,private apiRegiones:RegionService ,private router:Router, public formulario:FormBuilder,) {
+    this.FormUni=this.formulario.group({
+      FechaRegistro: [''],
+      Ofcid: [''],
+      RNPA: [''],
+      RFC: [''],
+      CURP: [''],
+      Nombres: [''],
+      ApPaterno: [''],
+      ApMaterno: [''],
+      FechaNacimiento: [''],
+      Sexo: [''],
+      GrupoSanguineo: [''],
+      Email: [''],
+      Calle: [''],
+      NmExterior: [''],
+      NmInterior: [''],
+      CodigoPostal: [''],
+      Locid: [''],
+      IniOperaciones: [''],
+      ActivoEmbMayor: [false],
+      ActivoEmbMenor: [false],
+      ActvAcuacultura: [false],
+      ActvPesca: [false],
+      DocActaNacimiento: [''],
+      DocComprobanteDomicilio: [''],
+      DocCURP: [''],
+      DocIdentificacionOfc: [''],
+      DocRFC: [''],
+       });
+       console.log(this.FormUni);
+   }
 
   ngOnInit(): void {
     this.Regiones();
@@ -50,9 +84,28 @@ export class UniconomicaComponent implements OnInit {
 
   oficin(){
     this.api.getOfi().subscribe((response: any ) => { 
-      this.data = response.data;
+      this.oficinas = response.data;
     console.log(response);
     })
+  }
+
+  enviar(): any {
+    console.log(this.FormUni.value);
+    this.api.agreUni(this.FormUni.value).subscribe(() => {
+      this.router.navigateByUrl('solicitud', { skipLocationChange: false }).then(() => {
+        this.router.navigate(['solicitud']);
+        this.mostrarSnackBar('SE AGREGO CON EXTITO', 'success-snackbar');
+      });
+    });
+  }
+
+  mostrarSnackBar(mensaje: string, clase: string): void {
+    this.snackBar.open(mensaje, '', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass: [clase],
+    });
   }
 
   
