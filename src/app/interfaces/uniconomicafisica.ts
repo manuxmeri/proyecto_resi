@@ -18,6 +18,10 @@ export interface Uniconomicafisica {
     NmInterior: string;
     CodigoPostal: string;
     Locid: string;
+    NmPrincipal: string;
+    TpNmPrincipal: string;
+    NmSecundario: string;
+    TpNmSecundario: string;
     IniOperaciones: string;
     ActivoEmbMayor: string;
     ActivoEmbMenor: string;
@@ -28,7 +32,6 @@ export interface Uniconomicafisica {
     DocCURP: string;
     DocIdentificacionOfc: string;
     DocRFC: string;
-
 
 
 

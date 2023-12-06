@@ -14,6 +14,9 @@ import { EditOficinaComponent } from './admin/unidadeconomica/edit-oficina/edit-
 import { AgreOficinaComponent } from './admin/unidadeconomica/agre-oficina/agre-oficina.component';
 import { PermisosComponent } from './admin/permisos/permisos.component';
 import { AgregarPermisoComponent } from './admin/permisos/agregar-permiso/agregar-permiso.component';
+import { EdituniconomicafisicaComponent } from './person/uniconomica/edituniconomicafisica/edituniconomicafisica.component';
+import { EspeciesComponent } from './admin/especies/especies.component';
+import { ArteFComponent } from './admin/arte-f/arte-f.component';
 
 
 
@@ -32,6 +35,9 @@ import { AgregarPermisoComponent } from './admin/permisos/agregar-permiso/agrega
     AgreOficinaComponent,
     PermisosComponent,
     AgregarPermisoComponent,
+    EdituniconomicafisicaComponent,
+    EspeciesComponent,
+    ArteFComponent,
    
   ],
   imports: [

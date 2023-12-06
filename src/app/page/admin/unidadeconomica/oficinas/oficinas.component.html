@@ -5,6 +5,61 @@
 <section class="container" style="margin-top: 50px;">
 <h1 > Lista de oficinas</h1>
 
+<div class="col-lg-2 col-lx-4"></div>
+<div class="col-lg-4 col-lx-4">
+   <div class="text-white p-1 text-center" style="background-color: #000000;">
+      AGREGAR ESPECIE
+   </div>
+   <form class="row" [formGroup]="FormOfi" (submit)="enviar()" ngNativeValidate>
+     
+
+
+         <div class="col-md-lg marginput">
+            <div class="form-group">
+               <label class="control-label textoInput">NOMBRE:</label>
+               <input formControlName="NombreOficina" type="text" required class="form-control required"
+                  style="text-transform: uppercase;">
+               <p class="vacio" id=""></p>
+
+               <label class="control-label textoInput">UBICACIÓN:</label>
+               <input formControlName="Ubicacion" type="text" required class="form-control required"
+                  style="text-transform: uppercase;">
+               <p class="vacio" id=""></p>
+
+               <label class="control-label textoInput">TELEFONO:</label>
+               <input formControlName="Telefono" type="text" required class="form-control required"
+                  style="text-transform: uppercase;">
+               <p class="vacio" id=""></p>
+
+               <label class="control-label textoInput">EMAIL:</label>
+               <input formControlName="Email" type="text" required class="form-control required"
+                  >
+               <p class="vacio" id=""></p>
+
+
+
+               <div class="row">
+                   <div class="col-md-lg">
+                      <div class="d-flex justify-content-end  " style="margin-bottom: 50px;">
+                         <button class="btn btn-default " (click)="cancelar()" type="button " height="40px;"
+                            style="background-color: rgb(110, 109, 109); color:white; margin-right: 20px;">Cancelar</button>
+                         <button class="btn  " style="background-color: brown; color:white;">Guardar</button>
+ 
+                      </div>
+                   </div>
+            </div>
+         </div>
+
+         
+
+      
+
+
+      
+      </div>
+   </form>
+</div>
+
 <table class="table table-bordered">
     <thead style="color:DarkCyan" class="text-center table-dark"  >
       <tr>

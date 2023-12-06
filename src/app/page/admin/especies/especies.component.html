@@ -1,0 +1,69 @@
+<app-header></app-header>
+
+
+<section class="container">
+   <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px; margin-bottom:30px;">
+      <p style=" font-size: 50px;"><strong>ESPECIES</strong></p>
+      <div>
+      </div>
+   </div>
+   <div class="order_boxes">
+      <div class="row">
+         <div class="col-lg-6 col-lx-4">
+           
+            <div>
+               <table class="table text-center"  style="text-transform: uppercase;">
+                <td class=" text-center textoInfo" style="background-color: #7B1E34;">#</td>
+                <td class=" text-center textoInfo" style="background-color: #7B1E34;">LISTA DE ARTE DE PESCA</td>
+                  <tr *ngFor="let especie of data ; let iControl = index">
+                     <td class="textoInput">{{especie.id}}</td>
+                     <td class="textoInput">{{especie.NombreEspecie}}</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div class="col-lg-2 col-lx-4"></div>
+         <div class="col-lg-4 col-lx-4">
+            <div class="text-white p-1 text-center" style="background-color: #000000;">
+               AGREGAR ESPECIE
+            </div>
+            <form class="row" [formGroup]="FormEspecie" (submit)="enviar()" ngNativeValidate>
+              
+
+
+                  <div class="col-md-lg marginput">
+                     <div class="form-group">
+                        <label class="control-label textoInput">NOMBRE:</label>
+                        <input formControlName="NombreEspecie" type="text" required class="form-control required"
+                           style="text-transform: uppercase;">
+                        <p class="vacio" id=""></p>
+
+                        <div class="row">
+                            <div class="col-md-lg">
+                               <div class="d-flex justify-content-end  " style="margin-bottom: 50px;">
+                                  <button class="btn btn-default " (click)="cancelar()" type="button " height="40px;"
+                                     style="background-color: rgb(110, 109, 109); color:white; margin-right: 20px;">Cancelar</button>
+                                  <button class="btn  " style="background-color: brown; color:white;">Guardar</button>
+          
+                               </div>
+                            </div>
+                     </div>
+                  </div>
+
+               
+
+
+               
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+</section>
+
+
+
+
+
+<app-footer></app-footer>

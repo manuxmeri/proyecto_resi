@@ -45,7 +45,7 @@
         <div class="borderso text-center" ></div>
 
        <div>
-         <form class="row formularyborder" [formGroup]="FormUni" (submit)="enviar()" ngNativeValidate>
+         <form [formGroup]="formUnid" (ngSubmit)="put()" ngNativeValidate>
      <div class="row formularyborder" >
       
         <div class="col-md-4 marginput ">
@@ -54,10 +54,10 @@
                 
                <label class="control-label textoInput">OFICINA:</label>
             </div>
-               <select class="form-select required" id="" name="Ofcid" formControlName="Ofcid"  #Ofcid>
-                      <option value="">Selecciona una opción</option>
-                      <option *ngFor="let ofi of oficinas " [value]="ofi.id">{{ofi.NombreOficina}}</option>       
-               </select>
+            <select class="form-select " id="" name="Ofcid" formControlName="Ofcid"
+            >
+            <option *ngFor="let oficina of oficinas; let index = index"    value="oficina.NombreOficina"  [selected]="index == oficina.NombreOficina " >{{ oficina.NombreOficina}}</option>
+        </select>
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -68,10 +68,10 @@
 
          <div class="col-md-4 marginput">
             <div class="form-group">
-               <label class="control-label textoInput">FECHA:</label>
+               <label class="control-label textoInput" >FECHA:</label>
                
-               <input class="form-control required" id="" name="" formControlName="FechaRegistro" type="date"
-               required>
+               <input class="form-control " id="" name="" formControlName="FechaRegistro"
+               [(ngModel)]="datosUnidadF.FechaRegistro" type="date" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -80,7 +80,8 @@
             <div class="form-group">
                <input class="form-check-input" style="margin-left: 5px;" type="checkbox" value="" id="defaultCheck1">
                <label class="control-label textoInput"style="margin-left: 5px;" >CAPTURAR RNPA:</label>
-               <input class="form-control required" id="" name="" formControlName="RNPA" type="text" required >
+               <input class="form-control " id="" name="" formControlName="RNPA"
+               [(ngModel)]="datosUnidadF.RNPA" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -104,7 +105,8 @@
 <div class="col-md-4 marginput">
    <div class="form-group">
       <label class="control-label textoInput">NOMBRES(S):</label>
-      <input class="form-control required" id="" name="" formControlName="Nombres" type="text" required>
+      <input class="form-control " id="" name="" formControlName="Nombres"
+      [(ngModel)]="datosUnidadF.Nombres" type="text" >
       <p class="vacio" id=""></p>
    </div>
 </div>
@@ -112,7 +114,8 @@
 <div class="col-md-4 marginput">
    <div class="form-group">
       <label class="control-label textoInput">APELLIDO PATERNO:</label>
-      <input class="form-control required" id="" name="" formControlName="ApPaterno" type="text" required>
+      <input class="form-control " id="" name="" formControlName="ApPaterno"
+      [(ngModel)]="datosUnidadF.ApPaterno" type="text" >
       <p class="vacio" id=""></p>
    </div>
 </div>
@@ -120,7 +123,8 @@
 <div class="col-md-4 marginput">
    <div class="form-group">
       <label class="control-label textoInput">APELLIDO MATERNO:</label>
-      <input class="form-control required" id="" name="" formControlName="ApMaterno" type="text" required>
+      <input class="form-control " id="" name="" formControlName="ApMaterno"
+      [(ngModel)]="datosUnidadF.ApMaterno" type="text" >
       <p class="vacio" id=""></p>
    </div>
 </div>
@@ -128,9 +132,9 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput" >CURP:</label>
-                   <input formControlName="CURP" type="text" required
+                   <input formControlName="CURP" [(ngModel)]="datosUnidadF.CURP" type="text" 
                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
-                   class="form-control required" style="text-transform: uppercase;">
+                   class="form-control " style="text-transform: uppercase;">
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -149,7 +153,8 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">RFC:</label>
-                   <input class="form-control required" id="" name="" formControlName="RFC" type="text" required>
+                   <input class="form-control " id="" name="" formControlName="RFC"
+                            [(ngModel)]="datosUnidadF.RFC" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -158,12 +163,12 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">SEXO</label>
-                   <select class="form-select required" id="" name="" formControlName="Sexo" required>
-                     <option>Selecciona una opción</option>
-                     <option value="F">FEMENINO</option>
-                     <option value="M">MASCULINO</option>
-                        
-                   </select>
+                   <select class="form-select " id="" name="" formControlName="Sexo"
+                   [(ngModel)]="datosUnidadF.Sexo" >
+                   <option selected>Selecciona una opción</option>
+                   <option value="F">F</option>
+                   <option value="M">M</option>
+               </select>
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -171,8 +176,8 @@
              <div class="col-md-4 marginput">
                <div class="form-group">
                   <label class="control-label textoInput">FECHA DE NACIMIENTO:</label>
-                  <input class="form-control required" id="" name="" formControlName="FechaNacimiento" type="date"
-                     required>
+                  <input class="form-control " id="" name="" formControlName="FechaNacimiento"
+                  [(ngModel)]="datosUnidadF.FechaNacimiento" type="date" >
                   <p class="vacio" id=""></p>
                </div>
             </div>
@@ -180,8 +185,8 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">GRUPO SANGUINEO:</label>
-                   <input class="form-control required" id="" name="" formControlName="GrupoSanguineo" type="text"
-                   required>
+                   <input class="form-control " id="" name="" formControlName="GrupoSanguineo"
+                   [(ngModel)]="datosUnidadF.GrupoSanguineo" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -190,7 +195,8 @@
              <div class="col-md-4 marginput">
                 <div class="form-group">
                    <label class="control-label textoInput">CORREO ELECTRONICO:</label>
-                   <input class="form-control required" id="" name="" formControlName="Email" type="text" required>
+                   <input class="form-control " id="" name="" formControlName="Email"
+                   [(ngModel)]="datosUnidadF.Email" type="text" >
                    <p class="vacio" id=""></p>
                 </div>
              </div>
@@ -236,7 +242,8 @@
         <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">NUMERO EXTERIOR:<span id="">*</span>:</label>
-               <input class="form-control required" id="" Name="" formControlName="NmExterior" type="text" required>
+               <input class="form-control " id="" Name="" formControlName="NmExterior"
+               [(ngModel)]="datosUnidadF.NmExterior" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -245,7 +252,8 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">NUMERO INTERIOR:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" formControlName="NmInterior" type="text" required>
+               <input class="form-control " id="" name="" formControlName="NmInterior"
+               [(ngModel)]="datosUnidadF.NmInterior" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -256,8 +264,8 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">CODIGO POSTAL:<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="" formControlName="CodigoPostal" type="text"
-               required>
+               <input class="form-control " id="" name="" formControlName="CodigoPostal"
+               [(ngModel)]="datosUnidadF.CodigoPostal" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -266,10 +274,10 @@
          <div class="col-md-4 marginput">
             <div class="form-group">
                <label class="control-label textoInput">LOCALIDAD:</label>
-                  <select class="form-select " id="" name="Locid" formControlName="Locid" #Locid>
-                     <option value="">Selecciona una opción</option>
-                     <option *ngFor="let localidad of locali" [value]="localidad.id">{{ localidad.NombreLocalidad}}</option>
-                 </select>
+               <select class="form-select " id="" name="Locid" formControlName="Locid"
+               [(ngModel)]="datosUnidadF.Locid" >
+                   <option *ngFor="let localidad of localidades" value="localidad.NombreLocalidad">{{ localidad.NombreLocalidad}}</option>
+               </select>
                <p class="vacio" id=""></p>
             </div>
          </div>
@@ -277,60 +285,11 @@
          <div class="col-md-8 marginput">
             <div class="form-group">
                <label class="control-label textoInput">CALLE:</label>
-               <input class="form-control required" id="" name="" formControlName="Calle" type="text" required>
+               <input class="form-control " id="" name="" formControlName="Calle"
+                            [(ngModel)]="datosUnidadF.Calle" type="text" >
                <p class="vacio" id=""></p>
             </div>
          </div>
-
-         <div class="col-md-4 marginput">
-            <div class="form-group">
-               <label class="control-label textoInput">TELEFONO PRINCIPAL<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="NmPrincipal" formControlName="NmPrincipal" type="text">
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
-
-         <div class="col-md-4 marginput">
-            <div class="form-group">
-               <label class="control-label textoInput">TIPO PRINCIPAL:</label>
-               <select class="form-select required" id="" name="" formControlName="TpNmPrincipal" required>
-                  <option selected>Selecciona una opción</option>
-                  <option value="CASA">CASA</option>
-                  <option value="MOVIL">MOVIL</option>
-                  <option value="OFICINA">OFICINA</option>
-               </select>
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
-
-         <div class="col-md-4 marginput">
-           
-         </div>
-
-         <div class="col-md-4 marginput">
-            <div class="form-group">
-               <label class="control-label textoInput">TELEFONO SECUNDARIO<span id="">*</span>:</label>
-               <input class="form-control required" id="" name="NmSecundario" formControlName="NmSecundario" type="text">
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
-
-         <div class="col-md-4 marginput">
-            <div class="form-group">
-               <label class="control-label textoInput">TIPO SECUNDARIO:</label>
-               <select class="form-select required" id="" name="" formControlName="TpNmSecundario" required>
-                  <option selected>Selecciona una opción</option>
-                  <option value="CASA">CASA</option>
-                  <option value="MOVIL">MOVIL</option>
-                  <option value="OFICINA">OFICINA</option>
-               </select>
-               <p class="vacio" id=""></p>
-            </div>
-         </div>
-           
-         
-
-         
 
         
 
@@ -354,7 +313,14 @@
 
              
 
-           
+             
+            <div class="col-md-4 marginput">
+               <div class="form-group">
+                  <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
+                  <input class="form-control required" id="" name="" type="text" >
+                  <p class="vacio" id=""></p>
+               </div>
+            </div>
 
 
            
@@ -442,8 +408,8 @@
         <div class="col-md-4 marginput">
            <div class="form-group"  >
               <label class="control-label textoInput">FECHA DE OPERACIONES</label>
-              <input class="form-control required input" id="" name="" formControlName="IniOperaciones" type="date"
-                     required>
+              <input class="form-control  input" id="" name="" formControlName="IniOperaciones"
+                            [(ngModel)]="datosUnidadF.IniOperaciones" type="date" >
               <p class="vacio" id=""></p>
           </div>
         </div>
@@ -451,14 +417,16 @@
         <div class="col-md-4 marginput">
          <label class="control-label textoInput">ACTIVOS:</label>
          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="activoEmbMayor" formControlName="ActivoEmbMayor">
-            <label class="form-check-label" for="activoEmbMayor">
+            <input class="form-check-input" type="checkbox" id="activoEmbMayor"
+            formControlName="ActivoEmbMayor" [(ngModel)]="datosUnidadF.ActivoEmbMayor">
+        <label class="form-check-label" for="activoEmbMayor">
                EMBARCACIONES MAYORES
             </label>
          </div>
          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="activoEmbMenor" formControlName="ActivoEmbMenor">
-            <label class="form-check-label" for="activoEmbMenor">
+            <input class="form-check-input" type="checkbox" id="activoEmbMenor"
+            formControlName="ActivoEmbMenor" [(ngModel)]="datosUnidadF.ActivoEmbMenor">
+        <label class="form-check-label" for="activoEmbMenor">
                EMBARCACIONES MENORES
             </label>
          </div>
@@ -472,14 +440,16 @@
            
                <label class="control-label textoInput">ACTIVIDAD PESQUERA:</label>
                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="activoEmbMayor" formControlName="ActvAcuacultura" >
-                  <label class="form-check-label" for="ActvAcuacultura">
+                <input class="form-check-input" type="checkbox" id="activoEmbMayor"
+                formControlName="ActvAcuacultura" [(ngModel)]="datosUnidadF.ActvAcuacultura">
+            <label class="form-check-label" for="ActvAcuacultura">
                      ACTIVIDAD ACUACULTURA
                   </label>
                </div>
                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="ActvPesca" formControlName="ActvPesca">
-                  <label class="form-check-label" for="ActvPesca">
+                <input class="form-check-input" type="checkbox" id="ActvPesca" formControlName="ActvPesca"
+                [(ngModel)]="datosUnidadF.ActvPesca">
+            <label class="form-check-label" for="ActvPesca">
                      ACTIVIDAD PESQUERA
                   </label>
                
@@ -499,20 +469,16 @@
       </thead>
       <tbody class="text-center">
          <tr>
-            <td>Acta de nacimiento</td>
+            <td>Comprobante de domicilio</td>
             <td>
-             
-                  
-
-                  
-                   <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                  </label> 
-                     <input class="form-control required input " type="file" accept=".pdf" class="file-input" id="" name="" formControlName="DocActaNacimiento"
-                   required>
-                
               
-            
+                  <label for="pdfFile" class="custom-input custom-button">
+                     <i class="bi bi-folder-plus"></i> Subir PDF
+                 </label> 
+                 <input class="form-control  input" id="" name=""
+                 formControlName="DocActaNacimiento" [(ngModel)]="datosUnidadF.DocActaNacimiento"
+                 type="text" accept=".pdf" >
+             
             </td>
          </tr>
          <tr>
@@ -522,9 +488,9 @@
                   <label for="pdfFile" class="custom-input custom-button">
                      <i class="bi bi-folder-plus"></i> Subir PDF
                  </label> 
-                 
-                  <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocComprobanteDomicilio"
-                required>
+                 <input class="form-control  input" id="" name=""
+                 formControlName="DocComprobanteDomicilio" [(ngModel)]="datosUnidadF.DocComprobanteDomicilio"
+                 type="text" >
              
             </td>
          </tr>
@@ -535,9 +501,8 @@
                   <label for="pdfFile" class="custom-input custom-button">
                      <i class="bi bi-folder-plus"></i> Subir PDF
                  </label> 
-                 <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocCURP"
-                 required>
-             
+                 <input class="form-control  input" id="" name="" formControlName="DocCURP"
+                 [(ngModel)]="datosUnidadF.DocCURP" type="text" >
             </td>
          </tr>
          <tr>
@@ -547,8 +512,8 @@
                   <label for="pdfFile" class="custom-input custom-button">
                      <i class="bi bi-folder-plus"></i> Subir PDF
                  </label> 
-                 <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocIdentificacionOfc"
-                 required>
+                 <input class="form-control  input" id="" name="" formControlName="DocIdentificacionOfc"
+                 [(ngModel)]="datosUnidadF.DocIdentificacionOfc" type="text" >
               
             </td>
          </tr>
@@ -559,8 +524,8 @@
                   <label for="pdfFile" class="custom-input custom-button">
                      <i class="bi bi-folder-plus"></i> Subir PDF
                  </label> 
-                 <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocRFC"
-                 required>
+                 <input class="form-control  input" id="" name="" formControlName="DocRFC"
+                            [(ngModel)]="datosUnidadF.DocRFC" type="text" >
              
             </td>
          </tr>

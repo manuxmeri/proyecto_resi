@@ -15,6 +15,9 @@ import { EditOficinaComponent } from './page/admin/unidadeconomica/edit-oficina/
 import { AgreOficinaComponent } from './page/admin/unidadeconomica/agre-oficina/agre-oficina.component';
 import { PermisosComponent } from './page/admin/permisos/permisos.component';
 import { AgregarPermisoComponent } from './page/admin/permisos/agregar-permiso/agregar-permiso.component';
+import { EdituniconomicafisicaComponent } from './page/person/uniconomica/edituniconomicafisica/edituniconomicafisica.component';
+import { EspeciesComponent } from './page/admin/especies/especies.component';
+import { ArteFComponent } from './page/admin/arte-f/arte-f.component';
 
 
 LoginComponent
@@ -80,6 +83,18 @@ const routes: Routes = [
   {
     path:'agregar-permiso',
     component:AgregarPermisoComponent
+  },
+  {
+    path:'editar-unidadconomicafi/:id',
+    component:EdituniconomicafisicaComponent
+  },
+  {
+    path:'especies',
+    component:EspeciesComponent
+  },
+  {
+    path:'artefisica',
+    component:ArteFComponent
   },
 
 

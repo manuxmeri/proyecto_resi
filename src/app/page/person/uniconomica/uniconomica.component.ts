@@ -40,6 +40,10 @@ export class UniconomicaComponent implements OnInit {
       NmInterior: [''],
       CodigoPostal: [''],
       Locid: [''],
+      NmPrincipal: [''],
+      TpNmPrincipal: [''],
+      NmSecundario: [''],
+      TpNmSecundario: [''],
       IniOperaciones: [''],
       ActivoEmbMayor: [false],
       ActivoEmbMenor: [false],
@@ -52,8 +56,9 @@ export class UniconomicaComponent implements OnInit {
       DocRFC: [''],
        });
        console.log(this.FormUni);
-   }
+      }
 
+   
   ngOnInit(): void {
     this.Regiones();
     this.Municipios();

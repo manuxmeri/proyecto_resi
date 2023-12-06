@@ -15,16 +15,18 @@ export class OficinasComponent implements OnInit {
 
   
   data:  any[]=[];
-  FormUni:FormGroup;
+  FormOfi:FormGroup;
   
-  constructor(private _snackBar: MatSnackBar, private dialog: MatDialog, private  api:ApiService ,private router:Router, public formulario:FormBuilder){
-    this.FormUni=this.formulario.group({
+  constructor(private snackBar: MatSnackBar, private dialog: MatDialog, private  api:ApiService ,private router:Router, public formulario:FormBuilder){
+    this.FormOfi=this.formulario.group({
       NombreOficina: [''],
       Ubicacion: [''],
       Telefono: [''],
       Email: ['']
       });
   }
+
+  
 
   ngOnInit(): void {
   
@@ -44,12 +46,26 @@ export class OficinasComponent implements OnInit {
     })
   }
 
-  enviar(): any{
-    console.log(this.FormUni.value);
-   
-    this.api.agreOfi(this.FormUni.value).subscribe();
-    this.router.navigateByUrl('panel')
+  
+ 
+    enviar(): any {
+      console.log(this.FormOfi.value);
+      this.api.agreOfi(this.FormOfi.value).subscribe(() => {
+        this.router.navigateByUrl('oficinas', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['oficinas']);
+          this.mostrarSnackBar('SE AGREGÓ CON ÉXITO', 'success-snackbar');
+          window.location.reload();
+        });
+      });
+    }
 
+    mostrarSnackBar(mensaje: string, clase: string): void {
+      this.snackBar.open(mensaje, '', {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+        panelClass: [clase],
+      });
     }
 
     editar(id = []){
@@ -81,14 +97,17 @@ export class OficinasComponent implements OnInit {
       }
       
       mostrarMensajeExitoso(mensaje: string): void {
-        this._snackBar.open(mensaje, '', {
+        this.snackBar.open(mensaje, '', {
           duration: 3000,
           panelClass: ['success-snackbar'], 
         });
       }
-      
+      cancelar() {
+        this.router.navigateByUrl('panel');
+      }
+
       mostrarMensajeError(mensaje: string): void {
-        this._snackBar.open(mensaje, '', {
+        this.snackBar.open(mensaje, '', {
           duration: 3000, 
           panelClass: ['error-snackbar'], 
         });
