@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -19,10 +19,10 @@ export class OficinasComponent implements OnInit {
   
   constructor(private snackBar: MatSnackBar, private dialog: MatDialog, private  api:ApiService ,private router:Router, public formulario:FormBuilder){
     this.FormOfi=this.formulario.group({
-      NombreOficina: [''],
-      Ubicacion: [''],
-      Telefono: [''],
-      Email: ['']
+      NombreOficina: ['', Validators.required],
+      Ubicacion: ['',Validators.required],
+      Telefono: ['',Validators.required],
+      Email: ['',Validators.required]
       });
   }
 
@@ -40,7 +40,7 @@ export class OficinasComponent implements OnInit {
   }
   
   uni(){
-    this.api.getUni().subscribe((response: any) => { 
+    this.api.getOfi().subscribe((response: any) => { 
       this.data = response.data;
     //  console.log(response);
     })

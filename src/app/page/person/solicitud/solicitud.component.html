@@ -52,72 +52,33 @@
       </div>
       
       
-    <div class="textosolicitud "  >
-      <p  class="solicitud" >Solicitudes</p>
-    </div>
-      <div class="borderso text-center"></div>
-
-     
-
-        <button onclick="window.modal1.showModal();" class=" butto2 button2">Agregar
-          <i class="bi bi-plus-lg"></i>
-        </button>
-        <dialog id="modal1">
-          <div class="modal-header">
-            <h5 style=" font-family: 'Montserrat'; font-size: 20px;">AGREGAR SOLICITUD</h5>
-            <div>
-              <a style="padding-left: 700%" type="button" onclick="window.modal1.close();"><i class="bi bi-x-lg"></i></a>
+      <div class="textosolicitud "  >
+        <p  class="solicitud" >Solicitudes</p>
+      </div>
+        <div class="borderso text-center"></div>
+  
+       <button (click)="openModal()" class=" butto2 button2">Agregar<i class="bi bi-plus-lg"></i></button>
+  
+  
+        <div class="row justify-content-end" style="margin-top: 50px;">
+          
+          <div class="col-md-3">
+            <div class="form-group">
+               <label class="control-label"><p>ESTATUS:</p></label>
+               <select class="form-select required" id="" name="">
+                      <option value="0">Selecciona una opción</option>
+                      <option value="1">Persona fisica</option>
+             <option value="2">Persona moral</option>
+                     
+                      <option value="3">Ambas</option>        
+               </select>
+               <p class="vacio" id=""></p>
             </div>
-          </div>
-          <div class="modal-body">
-            <div class="justify-content-start">
-              <div>
-                <p class="textonormal titu">Proceso:</p>
-                <select class="form-select "
-                  style="font-family: 'Montserrat'; font-size:17px; border: 1px solid #d9d3d3; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); margin-bottom:3%;">
-                  <option selected>Selecciona una opción</option>
-                  <option value="1">opción 1</option>
-                  <option value="2">opción 2</option>
-                  <option value="3">opción 3</option>
-                </select>
-              </div>
-              <div>
-                <p class="textonormal titu">Modalidad:</p>
-                <select class="form-select "
-                  style="font-family: 'Montserrat'; font-size:17px; border: 1px solid #d9d3d3; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); margin-bottom:3%;">
-                  <option selected>Selecciona una opción</option>
-                  <option value="1">opción 1</option>
-                  <option value="2">opción 2</option>
-                  <option value="3">opción 3</option>
-                </select>
-              </div>
-              <div>
-                <p class="textonormal titu">Tipo de solicitud:</p>
-                <select class="form-select "
-                  style="font-family: 'Montserrat'; font-size:17px; border: 1px solid #d9d3d3; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); ">
-                  <option selected>Selecciona una opción</option>
-                  <option value="1">opción 1</option>
-                  <option value="2">opción 2</option>
-                  <option value="3">opción 3</option>
-                </select>
-              </div>
-            </div>
-            <button onclick="window.modal1.close();" class=" butto2 button2" style=" margin-left: 50px;">Cancelar
-              <i class="bi bi-x"></i>
-            </button>
-            <button class="butto button1">Aceptar
-              <i class="bi bi-check-lg"></i>
-            </button>
-          </div>
-        </dialog>
-
-
-
-      <div class="row justify-content-end" style="margin-top: 50px;">
-        
-        <div class="col-md-3">
+         </div>
+  
+         <div class="col-md-3">
           <div class="form-group">
-             <label class="control-label"><p>ESTATUS:</p></label>
+             <label class="control-label"><p>PROCESO:</p></label>
              <select class="form-select required" id="" name="">
                     <option value="0">Selecciona una opción</option>
                     <option value="1">Persona fisica</option>
@@ -128,10 +89,10 @@
              <p class="vacio" id=""></p>
           </div>
        </div>
-
+  
        <div class="col-md-3">
         <div class="form-group">
-           <label class="control-label"><p>PROCESO:</p></label>
+           <label class="control-label"><p>MODALIDAD:</p></label>
            <select class="form-select required" id="" name="">
                   <option value="0">Selecciona una opción</option>
                   <option value="1">Persona fisica</option>
@@ -142,69 +103,40 @@
            <p class="vacio" id=""></p>
         </div>
      </div>
-
-     <div class="col-md-3">
-      <div class="form-group">
-         <label class="control-label"><p>MODALIDAD:</p></label>
-         <select class="form-select required" id="" name="">
-                <option value="0">Selecciona una opción</option>
-                <option value="1">Persona fisica</option>
-       <option value="2">Persona moral</option>
-               
-                <option value="3">Ambas</option>        
-         </select>
-         <p class="vacio" id=""></p>
-      </div>
-   </div>
-
-
-
-      </div>
-
-      <table class=" table table-striped text-center"  style=" margin-top:50px; margin-bottom: 80px; font-family: 'Montserrat'; font-size:17px; border:double rgb(179, 176, 176)">
-        <thead>
-          <tr>
-            <th scope="col">Folio</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Proceso</th>
-            <th scope="col">Modalidad</th>
-            <th scope="col">Tipo de solicitud</th>
-            <th scope="col">Opciones</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          <tr>
-            <th scope="row">ENM1234567890</th>
-            <td>17/06/2023</td>
-            <td>RNPA</td>
-            <td>Embarcaciones mayores</td>
-            <td>Alta</td>
-            <td><a href=""><i class="bi bi-check2-all"></i></a>
-              <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">ENM1234567891</th>
-            <td>17/06/2023</td>
-            <td>RNPA</td>
-            <td>Embarcaciones mayores</td>
-            <td>Alta</td>
-            <td><a href=""><i class="bi bi-check2-all"></i></a>
-              <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">ENM1234567810</th>
-            <td>17/06/2023</td>
-            <td>RNPA</td>
-            <td>Embarcaciones mayores</td>
-            <td>Alta</td>
-            <td><a href=""><i class="bi bi-check2-all"></i></a>
-              <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  
+  
+  
+        </div>
+  
+        <table class=" table table-striped text-center"  style=" margin-top:50px; margin-bottom: 80px; font-family: 'Montserrat'; font-size:17px; border:double rgb(179, 176, 176)">
+          <thead>
+            <tr >
+              <th scope="col">Folio</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">CURP</th>
+              <th scope="col">Dueño</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let data of data ; let iControl = index">
+              <th scope="row">{{data.id}}</th>
+              <td>{{data.FechaRegistro}}</td>
+              <td>{{data.CURP}}</td>
+              <td>{{data.Nombres}} {{data.ApMaterno}} {{data.ApPaterno}} </td>
+              <td>{{data.NmPrincipal}}</td>
+             
+              
+              
+              <td><a href=""><i class="bi bi-check2-all"></i></a>
+                <a href=""><i class="bi bi-file-earmark-post" style="margin-left: 6%;"></i></a>
+              </td>
+            </tr>
+           
+            
+          </tbody>
+        </table>
     </section>
     
 <app-footer></app-footer>

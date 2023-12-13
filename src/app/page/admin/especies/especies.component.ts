@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
@@ -14,7 +14,7 @@ export class EspeciesComponent implements OnInit {
   data:  any[]=[];
   constructor(private snackBar: MatSnackBar, private api:ApiService,private router:Router, public formulario:FormBuilder){ 
   this.FormEspecie=this.formulario.group({
-    NombreEspecie: [''],
+    NombreEspecie: ['',Validators.required],
      });
      console.log(this.FormEspecie);
 }

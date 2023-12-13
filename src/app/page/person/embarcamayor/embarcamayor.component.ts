@@ -36,7 +36,7 @@ export class EmbarcamayorComponent implements OnInit {
   }
   
   uni(){
-    this.api.getUni().subscribe((response: any) => { 
+    this.api.getOfi().subscribe((response: any) => { 
       this.data = response.data;
     //  console.log(response);
     })

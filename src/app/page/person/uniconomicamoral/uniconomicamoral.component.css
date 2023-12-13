@@ -7,10 +7,6 @@ input{
     margin-top: 5px;
    
 }
-.mayus{
-    text-transform: uppercase;
-}
-
 .bordeInput{
     margin-top: 30px;
     margin-top: 5px;
@@ -146,12 +142,14 @@ input[type="file"]::file-selector-button {
     margin-top: 40px;
 
   }
+  .mayus{
+    text-transform: uppercase;
+}
   .fondotabla{
     background-color: #3d3d3d;
     color: rgb(255, 255, 255);
     border:solid 1px rgb(129, 129, 129);
   }
 td{
-    border:solid 1px rgb(94, 94, 94);
-   
+    border:solid 1px rgb(129, 129, 129);
 }

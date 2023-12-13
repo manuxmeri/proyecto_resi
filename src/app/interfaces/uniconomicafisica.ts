@@ -33,7 +33,4 @@ export interface Uniconomicafisica {
     DocIdentificacionOfc: string;
     DocRFC: string;
 
-
-
-
 }

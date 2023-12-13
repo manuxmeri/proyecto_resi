@@ -37,6 +37,17 @@
                         <label class="control-label textoInput">NOMBRE:</label>
                         <input formControlName="NombreArtePesca" type="text" required class="form-control required"
                            style="text-transform: uppercase;">
+                           <div
+                  *ngIf="
+                  FormArte.controls['NombreArtePesca'].invalid &&
+                  (FormArte.controls['NombreArtePesca'].dirty || FormArte.controls['NombreArtePesca'].touched)
+                ">
+                <div *ngIf="FormArte.controls['NombreArtePesca'].errors">
+                 <label for="" style="background-color: #7B1E34; color:white; font-size:12px;">  El ubicaciónes requrido</label>
+                </div>
+                
+                  </div>
+                           
                         <p class="vacio" id=""></p>
                      </div>
                      <div class="row">

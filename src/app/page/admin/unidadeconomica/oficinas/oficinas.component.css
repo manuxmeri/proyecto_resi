@@ -143,3 +143,6 @@ dialog .modal-header {
     color: white;
     padding: 15px 28%;
 }
+.mayus{
+    text-transform: uppercase;
+}

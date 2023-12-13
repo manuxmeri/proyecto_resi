@@ -7,7 +7,7 @@ import { Regiones } from 'src/app/interfaces/regiones';
 import { Oficina } from 'src/app/interfaces/oficina';
 import { Municipios } from 'src/app/interfaces/municipios';
 import { Localidades } from '../../../interfaces/localidades';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -23,41 +23,40 @@ export class UniconomicaComponent implements OnInit {
   FormUni:FormGroup;
   constructor(private snackBar: MatSnackBar,private  api:ApiService,private apiRegiones:RegionService ,private router:Router, public formulario:FormBuilder,) {
     this.FormUni=this.formulario.group({
-      FechaRegistro: [''],
-      Ofcid: [''],
-      RNPA: [''],
-      RFC: [''],
-      CURP: [''],
-      Nombres: [''],
-      ApPaterno: [''],
-      ApMaterno: [''],
-      FechaNacimiento: [''],
-      Sexo: [''],
-      GrupoSanguineo: [''],
-      Email: [''],
-      Calle: [''],
-      NmExterior: [''],
-      NmInterior: [''],
-      CodigoPostal: [''],
+      FechaRegistro: ['',Validators.required],
+      Ofcid: ['',Validators.required],
+      RNPA: ['',Validators.required],
+      RFC: ['',Validators.required],
+      CURP: ['',Validators.required],
+      Nombres: ['',Validators.required],
+      ApPaterno: ['',Validators.required],
+      ApMaterno: ['',Validators.required],
+      FechaNacimiento: ['',Validators.required],
+      Sexo: ['',Validators.required],
+      GrupoSanguineo: ['',Validators.required],
+      Email: ['',Validators.required],
+      Calle: ['',Validators.required],
+      NmExterior: ['',Validators.required],
+      NmInterior: ['',Validators.required],
+      CodigoPostal: ['',Validators.required],
       Locid: [''],
-      NmPrincipal: [''],
-      TpNmPrincipal: [''],
-      NmSecundario: [''],
-      TpNmSecundario: [''],
-      IniOperaciones: [''],
+      NmPrincipal: ['',Validators.required],
+      TpNmPrincipal: ['',Validators.required],
+      NmSecundario: ['',Validators.required],
+      TpNmSecundario: ['',Validators.required],
+      IniOperaciones: ['',Validators.required],
       ActivoEmbMayor: [false],
       ActivoEmbMenor: [false],
       ActvAcuacultura: [false],
       ActvPesca: [false],
-      DocActaNacimiento: [''],
-      DocComprobanteDomicilio: [''],
-      DocCURP: [''],
-      DocIdentificacionOfc: [''],
-      DocRFC: [''],
+      DocActaNacimiento: ['',Validators.required],
+      DocComprobanteDomicilio: ['',Validators.required],
+      DocCURP: ['',Validators.required],
+      DocIdentificacionOfc: ['',Validators.required],
+      DocRFC: ['',Validators.required],
        });
        console.log(this.FormUni);
-      }
-
+  }
    
   ngOnInit(): void {
     this.Regiones();
@@ -95,13 +94,16 @@ export class UniconomicaComponent implements OnInit {
   }
 
   enviar(): any {
+    
     console.log(this.FormUni.value);
     this.api.agreUni(this.FormUni.value).subscribe(() => {
       this.router.navigateByUrl('solicitud', { skipLocationChange: false }).then(() => {
         this.router.navigate(['solicitud']);
-        this.mostrarSnackBar('SE AGREGO CON EXTITO', 'success-snackbar');
+        this.mostrarSnackBar('SE AGREGO CON ÉXITO', 'success-snackbar');
       });
     });
+
+    
   }
 
   mostrarSnackBar(mensaje: string, clase: string): void {

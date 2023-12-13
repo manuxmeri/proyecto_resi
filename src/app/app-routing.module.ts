@@ -18,6 +18,10 @@ import { AgregarPermisoComponent } from './page/admin/permisos/agregar-permiso/a
 import { EdituniconomicafisicaComponent } from './page/person/uniconomica/edituniconomicafisica/edituniconomicafisica.component';
 import { EspeciesComponent } from './page/admin/especies/especies.component';
 import { ArteFComponent } from './page/admin/arte-f/arte-f.component';
+import { UnidadconofisicasComponent } from './page/person/solicitud/unidadconofisicas/unidadconofisicas.component';
+import { UniconomicamoralComponent } from './page/person/uniconomicamoral/uniconomicamoral.component';
+import { SociosComponent } from './page/person/uniconomicamoral/socios/socios.component';
+import { ProductosComponent } from './page/admin/productos/productos.component';
 
 
 LoginComponent
@@ -96,6 +100,29 @@ const routes: Routes = [
     path:'artefisica',
     component:ArteFComponent
   },
+
+  {
+    path:'unifisicas/:id',
+    component:UnidadconofisicasComponent
+  },
+  
+  {
+    path:'unifisicas/:id',
+    component:UniconomicamoralComponent
+  },
+  {
+    path:'unimoral',
+    component:UniconomicamoralComponent
+  },
+  {
+    path:'socios/:id',
+    component:SociosComponent
+  },
+  {
+    path:'productos',
+    component:ProductosComponent
+  },
+  
 
 
 

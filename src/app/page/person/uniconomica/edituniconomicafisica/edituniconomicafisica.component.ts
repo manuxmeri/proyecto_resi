@@ -84,6 +84,8 @@ export class EdituniconomicafisicaComponent implements OnInit {
       NmExterior: [''],
       NmInterior: [''],
       CodigoPostal: [''],
+      NmPrincipal: [''],
+      NmSecundario: [''],
       Locid: [''],
       IniOperaciones: [''],
       ActivoEmbMayor: [false],

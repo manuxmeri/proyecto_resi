@@ -307,81 +307,72 @@
              
             
 
-             
-            
-            
-
-             
-
-             
-            <div class="col-md-4 marginput">
-               <div class="form-group">
-                  <label class="control-label textoInput">TELEFONO:<span id="">*</span>:</label>
-                  <input class="form-control required" id="" name="" type="text" >
-                  <p class="vacio" id=""></p>
-               </div>
+         <div class="col-md-4 marginput">
+            <div class="form-group">
+               <label class="control-label textoInput">TELEFONO PRINCIPAL<span id="">*</span>:</label>
+               <input class="form-control required" id="" name="NmPrincipal" formControlName="NmPrincipal"  [(ngModel)]="datosUnidadF.NmPrincipal" type="text">
+               <p class="vacio" id=""></p>
             </div>
+         </div>
+
+         <div class="col-md-4 marginput">
+            <div class="form-group">
+               <label class="control-label textoInput">TIPO PRINCIPAL:</label>
+               <select class="form-select required" id="" name="" formControlName="TpNmPrincipal" required>
+                  <option selected>Selecciona una opción</option>
+                  <option value="CASA">CASA</option>
+                  <option value="MOVIL">MOVIL</option>
+                  <option value="OFICINA">OFICINA</option>
+               </select>
+               <p class="vacio" id=""></p>
+            </div>
+         </div>
+
+         <div class="col-md-4 marginput">
+           
+         </div>
+
+         <div class="col-md-4 marginput">
+            <div class="form-group">
+               <label class="control-label textoInput">TELEFONO SECUNDARIO<span id="">*</span>:</label>
+               <input class="form-control required" id="" name="NmSecundario" formControlName="NmSecundario" [(ngModel)]="datosUnidadF.NmSecundario" type="text">
+               <p class="vacio" id=""></p>
+            </div>
+         </div>
+
+         <div class="col-md-4 marginput">
+            <div class="form-group">
+               <label class="control-label textoInput">TIPO SECUNDARIO:</label>
+               <select class="form-select required" id="" name="" formControlName="TpNmSecundario" required>
+                  <option selected>Selecciona una opción</option>
+                  <option value="CASA">CASA</option>
+                  <option value="MOVIL">MOVIL</option>
+                  <option value="OFICINA">OFICINA</option>
+               </select>
+               <p class="vacio" id=""></p>
+            </div>
+         </div>
+           
+         
+            
+            
+
+             
+
+             
+            
 
 
            
 
-           <div class="col-md-3 marginput">
-            <div class="form-group">
-               <label class="control-label textoInput"></label>
-               <button class="form-control required input"
-                  style="background-color: rgb(18, 119, 89); color:white; margin-top:15px;">
-                  <i class="bi bi-phone"></i> AGREGAR TELEFONO
-               </button>
-            </div>
-         </div>
-
+         
 
 
 
      </div>
 
      
-     <div class="d-flex justify-content-end  " style="margin-top:20px;  " >
-      <div class="d-flex text-center col-md-8" >
-         <table class=" table  text-center "    style="  margin-top:50px; margin-bottom: 80px; font-family: 'Montserrat'; font-size:17px; border:solid 1px rgb(179, 176, 176)">
-            <thead  >
-              <tr  >
-                <th class="fondotabla" scope="col">Telefono</th>
-                <th class="fondotabla" scope="col">Tipo</th>
-                <th class="fondotabla" scope="col">Principal</th>
-                <th  class="fondotabla"scope="col">Opción</th>
-                
-              </tr>
-            </thead>
-            <tbody style="border:solid 1px rgb(122, 122, 122); " class="text-center">
-              <tr>
-                <th scope="row">1</th>
-                <td>9711234567</td>
-                <td>Principal</td>
-             
-               
-                <td> <a href=""><i class="bi bi-trash-fill" style="margin-left: 6%;"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>55678948448</td>
-                <td>Secundario</td>
-               
-                <td>
-                  <a href=""><i class="bi bi-trash-fill" style="margin-left: 6%;"></i></a>
-                </td>
-              </tr>
-              <tr>
-               
-                
-              </tr>
-            </tbody>
-          </table>
-       
-      </div>
-   </div>
-     
+    
 
 
     
@@ -458,80 +449,90 @@
       </div>
       
       <div class="form-group ">
-      <h5 style=" font-family: 'Montserrat'; font-size: 18px;">IMPORTAR DOCUMENTOS</h5>
-      <table class=" table table-striped table-bordered"
-      style="font-family: 'Montserrat'; font-size:16px;">
-      <thead class="text-center">
-         <tr>
-            <th scope="col">DOCUMENTO</th>
-            <th scope="col">ARCHIVO</th>
-         </tr>
-      </thead>
-      <tbody class="text-center">
-         <tr>
-            <td>Comprobante de domicilio</td>
-            <td>
+         <strong > <p style=" font-family: 'Montserrat'; font-size: 18px; margin-bottom: 10px;">IMPORTAR DOCUMENTOS</p></strong>
+          
+         <table class=" table  "
+         style="font-family: 'Montserrat'; font-size:16px; border:solid 1px black">
+        
+         <thead class="text-center">
+            
+            <tr >
               
-                  <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                 </label> 
-                 <input class="form-control  input" id="" name=""
-                 formControlName="DocActaNacimiento" [(ngModel)]="datosUnidadF.DocActaNacimiento"
-                 type="text" accept=".pdf" >
-             
-            </td>
-         </tr>
-         <tr>
-            <td>Comprobante de domicilio</td>
-            <td>
-              
-                  <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                 </label> 
-                 <input class="form-control  input" id="" name=""
-                 formControlName="DocComprobanteDomicilio" [(ngModel)]="datosUnidadF.DocComprobanteDomicilio"
-                 type="text" >
-             
-            </td>
-         </tr>
-         <tr>
-            <td>Curp</td>
-            <td>
-              
-                  <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                 </label> 
-                 <input class="form-control  input" id="" name="" formControlName="DocCURP"
-                 [(ngModel)]="datosUnidadF.DocCURP" type="text" >
-            </td>
-         </tr>
-         <tr>
-            <td>Identificación Oficial</td>
-            <td>
                
-                  <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                 </label> 
-                 <input class="form-control  input" id="" name="" formControlName="DocIdentificacionOfc"
-                 [(ngModel)]="datosUnidadF.DocIdentificacionOfc" type="text" >
-              
-            </td>
-         </tr>
-         <tr>
-            <td>RFC</td>
-            <td>
-             
-                  <label for="pdfFile" class="custom-input custom-button">
-                     <i class="bi bi-folder-plus"></i> Subir PDF
-                 </label> 
-                 <input class="form-control  input" id="" name="" formControlName="DocRFC"
-                            [(ngModel)]="datosUnidadF.DocRFC" type="text" >
-             
-            </td>
-         </tr>
-      </tbody>
-   </table>
-   </div>
+               <th scope="col"  style="background-color: #7B1E34;  color: white;">DOCUMENTO</th>
+               <th scope="col" style="background-color: #7B1E34;  color: white;">ARCHIVO</th>
+            </tr>
+         </thead>
+         <tbody class="text-center" >
+            <tr >
+               <td >Acta de nacimiento</td>
+               <td>
+                
+                     
+   
+                     
+                      <label for="pdfFile" class="custom-input custom-button">
+                        <i class="bi bi-folder-plus"></i> Subir PDF
+                     </label> 
+                        <input class="form-control required input " type="file" accept=".pdf" class="file-input" id="" name="" formControlName="DocActaNacimiento"  [(ngModel)]="datosUnidadF.DocActaNacimiento"
+                      required>
+                   
+                 
+               
+               </td>
+            </tr>
+            <tr>
+               <td>Comprobante de domicilio</td>
+               <td>
+                 
+                     <label for="pdfFile" class="custom-input custom-button">
+                        <i class="bi bi-folder-plus"></i> Subir PDF
+                    </label> 
+                    
+                     <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocComprobanteDomicilio"
+                   required>
+                
+               </td>
+            </tr>
+            <tr>
+               <td>Curp</td>
+               <td>
+                 
+                     <label for="pdfFile" class="custom-input custom-button">
+                        <i class="bi bi-folder-plus"></i> Subir PDF
+                    </label> 
+                    <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocCURP"
+                    required>
+                
+               </td>
+            </tr>
+            <tr>
+               <td>Identificación Oficial</td>
+               <td>
+                  
+                     <label for="pdfFile" class="custom-input custom-button">
+                        <i class="bi bi-folder-plus"></i> Subir PDF
+                    </label> 
+                    <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocIdentificacionOfc"
+                    required>
+                 
+               </td>
+            </tr>
+            <tr>
+               <td>RFC</td>
+               <td>
+                
+                     <label for="pdfFile" class="custom-input custom-button">
+                        <i class="bi bi-folder-plus"></i> Subir PDF
+                    </label> 
+                    <input class="form-control required input"  type="file"   accept=".pdf" class="file-input" id="" name="" formControlName="DocRFC"
+                    required>
+                
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      </div>
  <!--
         <div class="col-md-3 marginput">
          <div class="form-group">

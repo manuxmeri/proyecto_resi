@@ -12,7 +12,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { PipesModule } from './pipes/pipes.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -45,6 +46,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     NoopAnimationsModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatFormFieldModule,
+    
+    
    
     
     
