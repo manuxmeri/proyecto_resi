@@ -10,6 +10,10 @@ import { Especies } from '../interfaces/especies';
 import { unidadMoral } from '../interfaces/unidad-moral';
 import { Socios } from '../interfaces/socios';
 import { Productos } from '../interfaces/productos';
+import { Regiones } from '../interfaces/regiones';
+import { Distritos } from '../interfaces/distritos';
+import { Municipios } from '../interfaces/municipios';
+import { Localidades } from '../interfaces/localidades';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +56,9 @@ path2 = `${environment.API_URL}unidades_economicas_pa_fisico`;
     return this.http.get('http://localhost:8000/api/telefonos_pa_fisico');
   }
   
+  getDistritos(){
+    return this.http.get('http://localhost:8000/api/distritos');
+  }
   
   /*agregar(uni: unidad): Observable<unidad>{
     return this.http.post<unidad>(`${this.path}`, uni)
@@ -140,5 +147,23 @@ getEspecie(){
   getProd() {
     return this.http.get('http://localhost:8000/api/productos');
   }
+
+  agrerRegion(region: Regiones): Observable<Regiones> {
+    let direccion = "http://localhost:8000/api/regiones";
+    return this.http.post<Regiones>(direccion, region)
+  }
+  agreDistrito(distrito: Distritos):Observable<Distritos>{
+    let direccion = "http://localhost:8000/api/distritos";
+    return this.http.post<Distritos>(direccion, distrito)
+  } 
+  agreMunicipio(municipio: Municipios):Observable<Municipios>{
+    let direccion = "http://localhost:8000/api/municipios";
+    return this.http.post<Municipios>(direccion, municipio)
+  } 
+  agreLocalidad(localidad: Localidades):Observable<Localidades>{
+    let direccion = "http://localhost:8000/api/localidades";
+    return this.http.post<Localidades>(direccion, localidad)
+  } 
+
 
 }

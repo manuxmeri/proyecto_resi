@@ -24,6 +24,9 @@ import { UnidadconofisicasComponent } from './person/solicitud/unidadconofisicas
 import { UniconomicamoralComponent } from './person/uniconomicamoral/uniconomicamoral.component';
 import { SociosComponent } from './person/uniconomicamoral/socios/socios.component';
 import { ProductosComponent } from './admin/productos/productos.component';
+import { RegionesComponent } from './admin/regiones/regiones.component';
+import { DistritosComponent } from './admin/distritos/distritos.component';
+import { MunicipiosComponent } from './admin/municipios/municipios.component';
 
 
 
@@ -50,6 +53,9 @@ import { ProductosComponent } from './admin/productos/productos.component';
     UniconomicamoralComponent,
     SociosComponent,
     ProductosComponent,
+    RegionesComponent,
+    DistritosComponent,
+    MunicipiosComponent,
     
    
   ],
