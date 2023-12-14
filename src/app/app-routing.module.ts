@@ -25,6 +25,7 @@ import { ProductosComponent } from './page/admin/productos/productos.component';
 import { RegionesComponent } from './page/admin/regiones/regiones.component';
 import { DistritosComponent } from './page/admin/distritos/distritos.component';
 import { MunicipiosComponent } from './page/admin/municipios/municipios.component';
+import { LocalidadesComponent } from './page/admin/localidades/localidades.component';
 
 
 LoginComponent
@@ -137,6 +138,12 @@ const routes: Routes = [
     path:'municipios',
     component:MunicipiosComponent
   },
+
+  {
+    path:'localidades',
+    component:LocalidadesComponent
+  },
+
 
 
 

@@ -3,7 +3,7 @@
 
 <section class="container">
    <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px; margin-bottom:30px;">
-      <p style=" font-size: 50px;"><strong>MUNICIPIOS</strong></p>
+      <p style=" font-size: 50px;"><strong>LOCALIDADES</strong></p>
       <div>
       </div>
    </div>
@@ -14,11 +14,11 @@
             <div>
                <table class="table   text-center"  style="text-transform: uppercase;">
              <td class=" text-center textoInfo" style="background-color: #7B1E34;">#</td>
-             <td class=" text-center textoInfo" style="background-color: #7B1E34;">LISTA DE MUNICIPIOS</td>
-                  <tr *ngFor="let pesca of datos ; let iControl = index">
+             <td class=" text-center textoInfo" style="background-color: #7B1E34;">LISTA DE LOCALIDADES</td>
+                  <tr *ngFor="let pesca of localidad ; let iControl = index">
                     
                      <td class="textoInput" style="border: solid 1px rgb(131, 130, 130);">{{pesca.id}}</td>
-                     <td class="textoInput"  style="border: solid 1px rgb(131, 130, 130);">{{pesca.NombreMunicipio}}</td>
+                     <td class="textoInput"  style="border: solid 1px rgb(131, 130, 130);">{{pesca.NombreLocalidad}}</td>
                   </tr>
                </table>
             </div>
@@ -26,23 +26,23 @@
          <div class="col-lg-2 col-lx-4"></div>
          <div class="col-lg-4 col-lx-4">
             <div class="text-white p-1 text-center" style="background-color: #000000;">
-               AGREGAR MUNICIPIO
+               AGREGAR LOCALIDAD
             </div>
-            <form class="row " [formGroup]="FormMunicipio" (submit)="enviar()" ngNativeValidate>
+            <form class="row " [formGroup]="FormLocalidad" (submit)="enviar()" ngNativeValidate>
               
 
 
                   <div class="col-md-lg marginput">
                      <div class="form-group">
                         <label class="control-label textoInput">NOMBRE:</label>
-                        <input formControlName="NombreMunicipio" type="text" required class="form-control required"
+                        <input formControlName="NombreLocalidad" type="text" required class="form-control required"
                            style="text-transform: uppercase;">
                            <div
                   *ngIf="
-                  FormMunicipio.controls['NombreMunicipio'].invalid &&
-                  (FormMunicipio.controls['NombreMunicipio'].dirty || FormMunicipio.controls['NombreMunicipio'].touched)
+                  FormLocalidad.controls['NombreLocalidad'].invalid &&
+                  (FormLocalidad.controls['NombreLocalidad'].dirty || FormLocalidad.controls['NombreLocalidad'].touched)
                 ">
-                <div *ngIf="FormMunicipio.controls['NombreMunicipio'].errors">
+                <div *ngIf="FormLocalidad.controls['NombreLocalidad'].errors">
                  <label for="" style="background-color: #7B1E34; color:white; font-size:12px;">  El nombre es requrido</label>
                 </div>
                 
@@ -61,10 +61,10 @@
                               </select>
                               <div
                      *ngIf="
-                     FormMunicipio.controls['Regid'].invalid &&
-                     (FormMunicipio.controls['Regid'].dirty || FormMunicipio.controls['Regid'].touched)
+                     FormLocalidad.controls['Regid'].invalid &&
+                     (FormLocalidad.controls['Regid'].dirty || FormLocalidad.controls['Regid'].touched)
                    ">
-                   <div *ngIf="FormMunicipio.controls['Regid'].errors">
+                   <div *ngIf="FormLocalidad.controls['Regid'].errors">
                     <label for="" style="background-color: #7B1E34; color:white; font-size:12px;">  La región es requrido</label>
                    </div>
                    
@@ -84,10 +84,10 @@
                               </select>
                               <div
                      *ngIf="
-                     FormMunicipio.controls['Disid'].invalid &&
-                     (FormMunicipio.controls['Disid'].dirty || FormMunicipio.controls['Disid'].touched)
+                     FormLocalidad.controls['Disid'].invalid &&
+                     (FormLocalidad.controls['Disid'].dirty || FormLocalidad.controls['Disid'].touched)
                    ">
-                   <div *ngIf="FormMunicipio.controls['Disid'].errors">
+                   <div *ngIf="FormLocalidad.controls['Disid'].errors">
                     <label for="" style="background-color: #7B1E34; color:white; font-size:12px;">  El distrito es requrido</label>
                    </div>
                    
@@ -96,6 +96,33 @@
                            <p class="vacio" id=""></p>
                         </div>
                     </div>
+
+
+
+                    <div class="col-md-lg marginput">
+                        <div class="form-group">
+                           <label class="control-label textoInput">MUNICIPIOS:</label>
+                           <select formControlName="Munid" type="text" required class="form-select required"
+                              style="text-transform: uppercase;">
+                              <option value="">Selecciona una opción</option>
+                              <option *ngFor="let municipio of datos " [value]="municipio.id">{{municipio.NombreMunicipio}}</option>       
+                              </select>
+                              <div
+                     *ngIf="
+                     FormLocalidad.controls['Munid'].invalid &&
+                     (FormLocalidad.controls['Munid'].dirty || FormLocalidad.controls['Munid'].touched)
+                   ">
+                   <div *ngIf="FormLocalidad.controls['Munid'].errors">
+                    <label for="" style="background-color: #7B1E34; color:white; font-size:12px;">  El municipio es requrido</label>
+                   </div>
+                   
+                     </div>
+                              
+                           <p class="vacio" id=""></p>
+                        </div>
+                    </div>
+
+
 
 
                      <div class="row">

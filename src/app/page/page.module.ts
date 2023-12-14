@@ -27,6 +27,7 @@ import { ProductosComponent } from './admin/productos/productos.component';
 import { RegionesComponent } from './admin/regiones/regiones.component';
 import { DistritosComponent } from './admin/distritos/distritos.component';
 import { MunicipiosComponent } from './admin/municipios/municipios.component';
+import { LocalidadesComponent } from './admin/localidades/localidades.component';
 
 
 
@@ -56,6 +57,7 @@ import { MunicipiosComponent } from './admin/municipios/municipios.component';
     RegionesComponent,
     DistritosComponent,
     MunicipiosComponent,
+    LocalidadesComponent,
     
    
   ],
