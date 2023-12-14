@@ -1,4 +1,18 @@
 <app-header></app-header>
+
+<div class="d-flex justify-content-between " style="margin-top:20px;" >
+  <div class="d-flex" >
+    <i class="bi bi-house-door" style="font-size: 22px;"></i>
+    <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
+    <p style="font-family: 'Montserrat';font-size: 22px; " ><a href="panel" style="text-decoration:none">Panel</a></p>
+    <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
+   <p style="font-family: 'Montserrat';font-size: 22px; "><a href="oficinas" style="text-decoration:none">Oficina</a></p>
+   
+  </div>
+  <a href="#"   style="font-family: 'Montserrat';font-size: 22px; color:blue; margin-right:15px;">Manual de usuario</a>
+
+</div>
+
 <body>
     
 
@@ -39,7 +53,7 @@
 <div class="col-lg-2 col-lx-4"></div>
 <div class="col-lg-4 col-lx-4">
    <div class="text-white p-1 text-center" style="background-color: #000000;">
-      AGREGAR ESPECIE
+      AGREGAR OFICINA
    </div>
    <form class="row" [formGroup]="FormOfi" (submit)="enviar()" ngNativeValidate>
      

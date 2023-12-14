@@ -1,19 +1,18 @@
 <app-header></app-header>
 
-<div class="d-flex justify-content-between " style="margin-top:20px;  margin-left: 8%">
-   <div class="d-flex">
-      <i class="bi bi-house-door" style="font-size: 22px;"></i>
-      <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
-      <p style="font-family: 'Montserrat';font-size: 22px; ">Solicitudes</p>
-      <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
-      <p style="font-family: 'Montserrat';font-size: 22px; ">Unidad Economica</p>
-      <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
-      <p style="font-family: 'Montserrat';font-size: 22px; ">Persona Moral</p>
 
+<div class="d-flex justify-content-between " style="margin-top:20px;" >
+   <div class="d-flex" >
+     <i class="bi bi-house-door" style="font-size: 22px;"></i>
+     <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
+     <p style="font-family: 'Montserrat';font-size: 22px; " ><a href="solicitud" style="text-decoration:none">Solicitudes</a></p>
+     <i class="bi bi-chevron-right" style="font-size: 22px;"></i>
+    <p style="font-family: 'Montserrat';font-size: 22px; "><a href="unimoral" style="text-decoration:none">Unidad economica moral</a></p>
+    
    </div>
-   <a href="#" style="font-family: 'Montserrat';font-size: 22px; color:blue; margin-right:15px;">Manual de usuario</a>
-
-</div>
+   <a href="#"   style="font-family: 'Montserrat';font-size: 22px; color:blue; margin-right:15px;">Manual de usuario</a>
+ 
+ </div>
 
 <section class="container ">
 
@@ -174,6 +173,39 @@
 
                <div class="col-md-4 marginput">
                   <div class="form-group">
+                     <label class="control-label textoInput">Regiones:</label>
+                     <select class="form-select " id="" name="Locid" formControlName="Locid" #Locid>
+                        <option *ngFor="let localidad of localidades" [value]="localidad.id">{{
+                           localidad.NombreLocalidad}}</option>
+                     </select>
+                     <p class="vacio" id=""></p>
+                  </div>
+               </div>
+
+               <div class="col-md-4 marginput">
+                  <div class="form-group">
+                     <label class="control-label textoInput">Distritos:</label>
+                     <select class="form-select " id="" name="Locid" formControlName="Locid" #Locid>
+                        <option *ngFor="let localidad of localidades" [value]="localidad.id">{{
+                           localidad.NombreLocalidad}}</option>
+                     </select>
+                     <p class="vacio" id=""></p>
+                  </div>
+               </div>
+
+               <div class="col-md-4 marginput">
+                  <div class="form-group">
+                     <label class="control-label textoInput">Municipios:</label>
+                     <select class="form-select " id="" name="Locid" formControlName="Locid" #Locid>
+                        <option *ngFor="let localidad of localidades" [value]="localidad.id">{{
+                           localidad.NombreLocalidad}}</option>
+                     </select>
+                     <p class="vacio" id=""></p>
+                  </div>
+               </div>
+
+               <div class="col-md-4 marginput">
+                  <div class="form-group">
                      <label class="control-label textoInput">Localidad:</label>
                      <select class="form-select " id="" name="Locid" formControlName="Locid" #Locid>
                         <option *ngFor="let localidad of localidades" [value]="localidad.id">{{
@@ -182,6 +214,8 @@
                      <p class="vacio" id=""></p>
                   </div>
                </div>
+
+               
 
                <div class="col-md-4 marginput">
                   <div class="form-group">
