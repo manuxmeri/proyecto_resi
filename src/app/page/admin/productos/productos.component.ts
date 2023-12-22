@@ -48,9 +48,12 @@ enviar(): any {
     this.router.navigateByUrl('productos', { skipLocationChange: false }).then(() => {
       this.router.navigate(['productos']);
       this.mostrarSnackBar('SE AGREGO CON ÉXITO', 'success-snackbar');
+      window.location.reload();
     });
   });
 }
+
+
 
 mostrarSnackBar(mensaje: string, clase: string): void {
   this.snackBar.open(mensaje, '', {

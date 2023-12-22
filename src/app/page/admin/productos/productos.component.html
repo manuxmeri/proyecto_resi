@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <div class="d-flex justify-content-between " style="margin-top:20px;" >
    <div class="d-flex" >
      <i class="bi bi-house-door" style="font-size: 22px;"></i>
@@ -14,81 +15,117 @@
 
 <section class="container">
    <div class="textosolicitud " style=" font-family: 'Montserrat'; margin-top:30px; margin-bottom:30px;">
-      <p style=" font-size: 50px;"><strong>PRODUCTOS</strong></p>
+      <p style=" font-size: 50px;"><strong>  PRODUCTOS</strong></p>
       <div>
       </div>
    </div>
    <div class="order_boxes">
       <div class="row">
          <div class="col-lg-6 col-lx-4">
-            <div class="text-white p-1 text-center" style="background-color: #7B1E34">
-               LISTA DE PRODUCTOS
-            </div>
+           
             <div>
-               <table class="table" style="text-transform: uppercase;">
-                  <tr *ngFor="let producto of data ; let iControl = index">
-                     <td>{{producto.id}}</td>
-                     <td>{{producto.NombreComun}}</td>
-                     <td>{{producto.NombreCientifico}}</td>
-                     <td>{{producto.TPEspecieid}}</td>
+               <table class="table   text-center"  style="text-transform: uppercase;">
+             <td class=" text-center textoInfo" style="background-color: #7B1E34;">#</td>
+             <td class=" text-center textoInfo" style="background-color: #7B1E34;">LISTA DE PRODUCTOS</td>
+                  <tr *ngFor="let pesca of data ; let iControl = index">
+                    
+                     <td class="textoInput" style="border: solid 1px rgb(131, 130, 130);">{{pesca.id}}</td>
+                     <td class="textoInput"  style="border: solid 1px rgb(131, 130, 130);">{{pesca.NombreComun}}</td>
                   </tr>
                </table>
             </div>
          </div>
-         <div class="col-lg-6 col-lx-4">
-            <div class="text-white p-1 text-center" style="background-color: #7B1E34">
-               AGREGAR PRODUCTO
+         <div class="col-lg-2 col-lx-4"></div>
+         <div class="col-lg-4 col-lx-4">
+            <div class="text-white p-1 text-center" style="background-color: #000000;">
+               AGREGAR PRODUCTOS
             </div>
-            <form class="row formularyborder" [formGroup]="FormProducto" (submit)="enviar()" ngNativeValidate>
-               <div class="row formularyborder">
+            <form class="row " [formGroup]="FormProducto" (submit)="enviar()" ngNativeValidate>
+              
 
 
-                  <div class="col-md-12 marginput">
+                  <div class="col-md-lg marginput">
                      <div class="form-group">
-                        <label class="control-label textoInput">NOMBRE COMÚN:</label>
+                        <label class="control-label textoInput">NOMBRE:</label>
                         <input formControlName="NombreComun" type="text" required class="form-control required"
                            style="text-transform: uppercase;">
+                           <div
+                  *ngIf="
+                  FormProducto.controls['NombreComun'].invalid &&
+                  (FormProducto.controls['NombreComun'].dirty || FormProducto.controls['NombreComun'].touched)
+                ">
+                <div *ngIf="FormProducto.controls['NombreComun'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El nombre es obligatorio</label>
+                </div>
+                
+                  </div>
+                           
                         <p class="vacio" id=""></p>
                      </div>
-                  </div>
 
-                  <div class="col-md-12 marginput">
-                     <div class="form-group">
-                        <label class="control-label textoInput">NOMBRE CIENTIFICO:</label>
-                        <input formControlName="NombreCientifico" type="text" required class="form-control required"
-                           style="text-transform: uppercase;">
-                        <p class="vacio" id=""></p>
+
+                     
+
+                     <div class="col-md-lg marginput">
+                        <div class="form-group">
+                           <label class="control-label textoInput">NOMBRE CIENTIFICO:</label>
+                           <input formControlName="NombreCientifico" type="text" required class="form-control required"
+                              style="text-transform: uppercase;">
+                              <div
+                     *ngIf="
+                     FormProducto.controls['NombreCientifico'].invalid &&
+                     (FormProducto.controls['NombreCientifico'].dirty || FormProducto.controls['NombreCientifico'].touched)
+                   ">
+                   <div *ngIf="FormProducto.controls['NombreCientifico'].errors">
+                     <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El nombre cientifico es obligatorio</label>
+                   </div>
+                   
                      </div>
-                  </div>
-
-                  <div class="col-md-12 marginput ">
-                     <div class="form-group">
-                        <label class="control-label textoInput">TIPO DE ESPECIE:</label>
-                        <select class="form-select " id="" name="TPEspecieid" formControlName="TPEspecieid"
-                           #TPEspecieid>
-                           <option *ngFor="let especie of especies" [value]="especie.id">{{ especie.NombreEspecie}}
-                           </option>
-                        </select>
+                              
+                           <p class="vacio" id=""></p>
+                        </div>
                      </div>
 
-                     <p class="vacio" id=""></p>
+
+                     <div class="col-md-lg marginput">
+                        <div class="form-group">
+                           <label class="control-label textoInput">TIPO DE ESPECIE:</label>
+                           <select class="form-select required" id="" name="TPEspecieid" formControlName="TPEspecieid"  #TPEspecieid>
+                              <option value="">Selecciona una opción</option>
+                              <option *ngFor="let tipo of especies " [value]="tipo.id">{{tipo.NombreEspecie}}</option>       
+                       </select>
+                              <div
+                     *ngIf="
+                     FormProducto.controls['TPEspecieid'].invalid &&
+                     (FormProducto.controls['TPEspecieid'].dirty || FormProducto.controls['TPEspecieid'].touched)
+                   ">
+                   <div *ngIf="FormProducto.controls['TPEspecieid'].errors">
+                     <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El nombre es obligatorio</label>
+                   </div>
+                   
+                     </div>
+                              
+                           <p class="vacio" id=""></p>
+                        </div>
+                     </div>
+
+
+
+
                      <div class="row">
                         <div class="col-md-lg">
                            <div class="d-flex justify-content-end  " style="margin-bottom: 50px;">
-                              <button class="btn btn-default " (click)="cancelar()" type="button " height="40px;"
+                              <button class="btn btn-default botones" (click)="cancelar()" type="button " height="40px;"
                                  style="background-color: rgb(110, 109, 109); color:white; margin-right: 20px;">Cancelar</button>
                               <button class="btn  " style="background-color: brown; color:white;">Guardar</button>
       
                            </div>
                         </div>
-                 </div>
-              </div>
-
-           
+                     </div>
+                  </div>
 
 
-           
-           </div>
+              
             </form>
          </div>
 
