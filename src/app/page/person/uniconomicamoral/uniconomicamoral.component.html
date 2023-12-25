@@ -93,6 +93,16 @@
                   <label class="control-label textoInput">RAZÓN SOCIAL:</label>
                   <input class="form-control required mayus" id="" name="" formControlName="RazonSocial" type="text"
                      style="text-transform: uppercase;" required>
+                     <div
+                     *ngIf="
+                     FormUniMoral.controls['RazonSocial'].invalid &&
+                     (FormUniMoral.controls['RazonSocial'].dirty || FormUniMoral.controls['RazonSocial'].touched)
+                   ">
+                   <div *ngIf="FormUniMoral.controls['RazonSocial'].errors">
+                     <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> La razon social es obligatoria</label>
+                   </div>
+                   
+                     </div>
                   <p class="vacio" id=""></p>
                </div>
             </div>
@@ -103,6 +113,16 @@
                   <label class="control-label textoInput">RFC:</label>
                   <input class="form-control required mayus" id="" name="" formControlName="RFC" type="text"
                      style="text-transform: uppercase;" maxlength="13" required>
+                     <div
+                     *ngIf="
+                     FormUniMoral.controls['RFC'].invalid &&
+                     (FormUniMoral.controls['RFC'].dirty || FormUniMoral.controls['RFC'].touched)
+                   ">
+                   <div *ngIf="FormUniMoral.controls['RFC'].errors">
+                     <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El RFC es obligatorio</label>
+                   </div>
+                   
+                     </div>
                   <p class="vacio" id=""></p>
                </div>
             </div>
@@ -111,6 +131,16 @@
                <div class="form-group">
                   <label class="control-label textoInput">CORREO ELECTRONICO:</label>
                   <input class="form-control required" id="" name="" formControlName="Email" type="text" required>
+                  <div
+                  *ngIf="
+                  FormUniMoral.controls['Email'].invalid &&
+                  (FormUniMoral.controls['Email'].dirty || FormUniMoral.controls['Email'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['Email'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El correo es obligatorio</label>
+                </div>
+                
+                  </div>
                   <p class="vacio" id=""></p>
                </div>
             </div>
@@ -139,6 +169,16 @@
                      <label class="control-label textoInput">CALLE:</label>
                      <input class="form-control required mayus" id="" name="" formControlName="Calle" type="text"
                         style="text-transform: uppercase;" required>
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['Calle'].invalid &&
+                  (FormUniMoral.controls['Calle'].dirty || FormUniMoral.controls['Calle'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['Calle'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> La calle es obligatoria</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -147,6 +187,16 @@
                      <label class="control-label textoInput">NUMERO EXTERIOR<span id="">*</span>:</label>
                      <input class="form-control required" id="" Name="" formControlName="NmExterior" type="text"
                         maxlength="6" required>
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['NmExterior'].invalid &&
+                  (FormUniMoral.controls['NmExterior'].dirty || FormUniMoral.controls['NmExterior'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['NmExterior'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> La numero exterior es obligatorio</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -157,6 +207,16 @@
                      <label class="control-label textoInput">NUMERO INTERIOR<span id="">*</span>:</label>
                      <input class="form-control required" id="" name="" formControlName="NmInterior" type="text"
                         maxlength="6" required>
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['NmInterior'].invalid &&
+                  (FormUniMoral.controls['NmInterior'].dirty || FormUniMoral.controls['NmInterior'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['NmInterior'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El numero interior es obligatorio</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -167,6 +227,16 @@
                      <label class="control-label textoInput ">CODIGO POSTAL<span id="">*</span>:</label>
                      <input class="form-control required" id="" name="" formControlName="CodigoPostal" type="text"
                         maxlength="10" required>
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['CodigoPostal'].invalid &&
+                  (FormUniMoral.controls['CodigoPostal'].dirty || FormUniMoral.controls['CodigoPostal'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['CodigoPostal'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El codigo postal es obligatorio</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -222,6 +292,16 @@
                      <label class="control-label textoInput">TELEFONO PRINCIPAL<span id="">*</span>:</label>
                      <input class="form-control required" id="" name="NmPrincipal" formControlName="NmPrincipal"
                         type="text" maxlength="10">
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['NmPrincipal'].invalid &&
+                  (FormUniMoral.controls['NmPrincipal'].dirty || FormUniMoral.controls['NmPrincipal'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['NmPrincipal'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> El numero principal es obligatorio</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -244,6 +324,16 @@
                      <label class="control-label textoInput">TELEFONO SECUNDARIO<span id="">*</span>:</label>
                      <input class="form-control required" id="" name="NmSecundario" formControlName="NmSecundario"
                         type="text" maxlength="10">
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['NmSecundario'].invalid &&
+                  (FormUniMoral.controls['NmSecundario'].dirty || FormUniMoral.controls['NmSecundario'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['NmSecundario'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> La numero secundario es obligatorio</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
@@ -401,6 +491,16 @@
                      <label class="control-label textoInput">CANTIDAD DE PESCADOR (ES)*:</label>
                      <input class="form-control required input" id="" name="" type="number"
                         formControlName="CantidadPescadores" required>
+                        <div
+                  *ngIf="
+                  FormUniMoral.controls['CantidadPescadores'].invalid &&
+                  (FormUniMoral.controls['CantidadPescadores'].dirty || FormUniMoral.controls['CantidadPescadores'].touched)
+                ">
+                <div *ngIf="FormUniMoral.controls['CantidadPescadores'].errors">
+                  <label  class="control-label " for="" style="background-color: #eb0339; color:white; font-size:12px;"> <i class="bi bi-exclamation-circle-fill"></i> La cantidad de pescadores es obligatoria</label>
+                </div>
+                
+                  </div>
                      <p class="vacio" id=""></p>
                   </div>
                </div>
